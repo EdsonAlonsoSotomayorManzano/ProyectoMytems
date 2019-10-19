@@ -1,0 +1,63 @@
+﻿<Window x:Class="Mytems.Home"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mytems"
+        mc:Ignorable="d"
+        Title="Mytems" Height="587" Width="800" Background="#FFE2E2E2">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="Margin" Value="10"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="Margin" Value="10"/>
+        </Style>
+    </Window.Resources>
+    <Grid Margin="0,0,0,475" Name="Grin1" Background="#36B6FF" AllowDrop="False">
+        <Image Source="images/LOGO1 (1).png" Margin="-4,-3,701,10" Height="75" VerticalAlignment="Bottom" RenderTransformOrigin="0.518,-0.053"/>
+        <TextBox x:Name="txtSerch" Margin="96,10,307,0" Width="Auto" Height="34" VerticalAlignment="Top"/>
+        <Button Content="GO!" HorizontalAlignment="Left" Margin="477,10,0,0" VerticalAlignment="Top" Width="42" Height="34" RenderTransformOrigin="0.242,0.522" Background="White">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.426"/>
+                    <TranslateTransform X="-0.004" Y="-0.056"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <ComboBox HorizontalAlignment="Center" Margin="521,39,185,0" VerticalAlignment="Top" Width="86" RenderTransformOrigin="0.178,0.5" Height="27" BorderBrush="{x:Null}" Foreground="Black" OpacityMask="Black" SelectionChanged="ComboBox_SelectionChanged" Background="{x:Null}" SnapsToDevicePixels="True">
+            <ComboBoxItem Name="cbFav" Content="Favorites" Selector.IsSelected="True"/>
+        </ComboBox>
+        <ComboBox Name="cbAcc" HorizontalAlignment="Center" Margin="612,39,92,16" Width="88">
+            <ComboBoxItem Content="MyAccount" Selector.IsSelected="True" Margin="-286,0,286,0"/>
+            <ComboBoxItem Content="Porfile"/>
+            <ComboBoxItem Content="Setting"/>
+            <ComboBoxItem Content="Shopping"/>
+        </ComboBox>
+        <Button HorizontalAlignment="Left" Margin="700,41,0,0" VerticalAlignment="Top" Width="53" Height="22" Cursor="No" Background="#FF150101" BorderBrush="LightGray">
+            <Button.OpacityMask>
+                <ImageBrush ImageSource="Images/shoppingcart_80945.png" Stretch="Uniform"/>
+            </Button.OpacityMask>
+        </Button>
+        <Label Content="Mytems! the massive pixel market" HorizontalAlignment="Center" Height="24" Margin="521,10,0,0" VerticalAlignment="Top" Width="232" FontFamily="Bold"/>
+        <Image HorizontalAlignment="Left" Height="119" Margin="78,142,0,-179" VerticalAlignment="Top" Width="203" Source="Images/header_586x192.jpg" Stretch="Fill"/>
+        <Image HorizontalAlignment="Left" Height="119" Margin="300,142,0,-179" VerticalAlignment="Top" Width="198" Source="Images/p1_2348574_cdf2effa.jpg" Stretch="Fill"/>
+        <Image HorizontalAlignment="Left" Height="119" Margin="521,142,0,-180" VerticalAlignment="Top" Width="200" Source="Images/450_1000 (1).jpg" Stretch="Fill"/>
+        <Button Content="See More" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Margin="124,286,0,-237" Height="33" Background="#36B6FF"/>
+        <Button Content="See More" HorizontalAlignment="Left" Height="33" Margin="348,286,0,-237" VerticalAlignment="Top" Width="111" Background="#36B6FF"/>
+        <Button Content="See More" HorizontalAlignment="Left" Height="33" Margin="566,286,0,-237" VerticalAlignment="Top" Width="111" Background="#36B6FF"/>
+        <Image HorizontalAlignment="Left" Height="119" Margin="78,362,0,-400" VerticalAlignment="Top" Width="203" Source="Images/poke crianza2.0.jpg" Stretch="Fill"/>
+        <Image HorizontalAlignment="Left" Height="119" Margin="300,362,0,-400" VerticalAlignment="Top" Width="203" Source="Images/450_1000.jpg" Stretch="Fill"/>
+        <Image HorizontalAlignment="Left" Height="119" Margin="521,362,0,-400" VerticalAlignment="Top" Width="203" Source="Images/Fortnite_battle-pass_season-x_S10_KeyArt_LineUp_Logo_1920x1080-1920x1080-4deed5e28027cea2c5d6ab36321f3eaa32b8f6ce.jpg" Stretch="Fill"/>
+        <Button Content="See More" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Margin="124,506,0,-458" Height="33" Background="#36B6FF"/>
+        <Button Content="See More" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Margin="348,506,0,-458" Height="33" Background="#36B6FF"/>
+        <Button Content="See More" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Margin="124,506,0,-458" Height="33" Background="#36B6FF"/>
+        <Button Content="See More" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Margin="566,506,0,-458" Height="33" Background="#36B6FF"/>
+    </Grid>
+</Window>
