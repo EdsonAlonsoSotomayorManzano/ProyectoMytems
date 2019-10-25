@@ -28,5 +28,12 @@ namespace Mytems
         {
 
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            CSGO counter = new CSGO();
+            counter.Show();
+            this.Close();
+        }
     }
 }

@@ -10,31 +10,38 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Mytems
 {
     /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
+    /// Lógica de interacción para CSGO.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CSGO : Window
     {
-        public MainWindow()
+        public CSGO()
         {
             InitializeComponent();
         }
 
-        private void btnFPass_Click(object sender, RoutedEventArgs e)
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
 
-        private void BtnLogin_Click(object sender, RoutedEventArgs e)
+        private void CbAcc_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Home lobby = new Home();
-            lobby.Show();
-            this.Close();
+
+        }
+
+        private void BtnBuyAWP_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnBuyKnife_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
