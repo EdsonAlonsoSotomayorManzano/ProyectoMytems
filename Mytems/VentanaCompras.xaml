@@ -1,0 +1,50 @@
+﻿<Window x:Class="Mytems.VentanaCompras"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mytems"
+        mc:Ignorable="d"
+        Title="VentanaCompras" Height="700" Width="800" Background="#FFBEC8C9">
+    <Grid Height="81" VerticalAlignment="Top" Background="#36B6FF" Margin="0,0,0,0">
+        <Image HorizontalAlignment="Left" Height="79" VerticalAlignment="Top" Width="97" Source="Images/LOGO1 (1).png"/>
+        <TextBox x:Name="txtSerch" Margin="96,19,307,0" Width="Auto" Height="34" VerticalAlignment="Top"/>
+        <Button Content="GO!" HorizontalAlignment="Left" Margin="483,19,0,0" VerticalAlignment="Top" Width="42" Height="34" RenderTransformOrigin="0.242,0.522" Background="White" Click="Button_Click"/>
+        <ComboBox HorizontalAlignment="Center" Margin="526,54,180,0" VerticalAlignment="Top" Width="86" RenderTransformOrigin="0.178,0.5" Height="27" BorderBrush="{x:Null}" Foreground="Black" OpacityMask="Black" SelectionChanged="ComboBox_SelectionChanged" Background="{x:Null}" SnapsToDevicePixels="True">
+            <ComboBoxItem Name="cbFav" Content="Favorites" Selector.IsSelected="True"/>
+        </ComboBox>
+        <ComboBox Name="cbAcc" HorizontalAlignment="Center" Margin="612,54,92,0" Width="88" SelectionChanged="CbAcc_SelectionChanged">
+            <ComboBoxItem Content="MyAccount" Selector.IsSelected="True" Margin="-286,0,286,0"/>
+            <ComboBoxItem Content="Porfile"/>
+            <ComboBoxItem Content="Setting"/>
+            <ComboBoxItem Content="Shopping"/>
+        </ComboBox>
+        <Button HorizontalAlignment="Left" Name="btncarro" Margin="705,54,0,5" Width="53" Cursor="No" Background="#FF150101" BorderBrush="LightGray" RenderTransformOrigin="0.5,0.5" Click="Button_Click_1">
+            <Button.OpacityMask>
+                <ImageBrush ImageSource="Images/shoppingcart_80945.png" Stretch="Uniform"/>
+            </Button.OpacityMask>
+        </Button>
+        <Label Content="Mytems! the massive pixel market" HorizontalAlignment="Center" Height="24" Margin="550,19,10,0" VerticalAlignment="Top" Width="232" FontFamily="Bold"/>
+        <Image HorizontalAlignment="Left" Height="236" Margin="36,148,0,-303" Source="Images/KARAMBIT.jpeg" VerticalAlignment="Top" Width="334" Stretch="Fill">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="Images/450_1000 (1).jpg"/>
+            </Image.OpacityMask>
+        </Image>
+        <TextBlock HorizontalAlignment="Left" Margin="431,148,0,-125" TextWrapping="Wrap" Text="KARAMBIT LIMITED EDITION DOPPLER" VerticalAlignment="Top" Height="58" Width="351" FontSize="20" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="428,274,0,-224" TextWrapping="Wrap" Text="PRECIO: $0.00 MX" VerticalAlignment="Top" Width="205" Height="31" FontWeight="Bold"/>
+        <Button HorizontalAlignment="Left" Height="36" Margin="431,326,0,-281" VerticalAlignment="Top" Width="177" Content="CONFIRM PURCHASE" Background="#36B6FF" Foreground="Black" x:Name="BtnBuyKnife" Click="BtnBuyKnife_Click" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="36,406,0,-375" TextWrapping="Wrap" Background="#36B6FF" VerticalAlignment="Top" Height="50" Width="334" FontSize="22" FontWeight="Bold" TextAlignment="Center" ><Run Text="            "/><Run Text="f"/><Run Text="eatures:                    "/></TextBlock>
+        <TextBox x:Name="txtfeatures" Background="#FFDDF4FF" HorizontalAlignment="Left" Height="154" Margin="36,462,0,-535" TextWrapping="Wrap" Text="An excellent option for your perfect games.                  &#xD;&#xA;&#xD;&#xA;This weapon is an special edition and with an unique color." VerticalAlignment="Top" Width="334" FontSize="14" FontWeight="Bold" FontFamily="Tahoma"/>
+        <ComboBox Name="cbColor" HorizontalAlignment="Left" Height="24" Margin="428,228,0,-171" VerticalAlignment="Top" Width="165" >
+            <ComboBoxItem Content="Seleccione el color " Selector.IsSelected="True"/>
+            <ComboBoxItem Content="Galactic purple"/>
+            <ComboBoxItem Content="Red Dragon"/>
+            <ComboBoxItem Content="Blue sky"/>
+
+        </ComboBox>
+                 
+
+    </Grid>
+
+
+</Window>

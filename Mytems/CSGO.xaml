@@ -37,7 +37,7 @@
                 <ImageBrush ImageSource="Images/450_1000 (1).jpg"/>
             </Image.OpacityMask>
         </Image>
-        <Image HorizontalAlignment="Left" Height="5" Margin="209,721,0,-645" VerticalAlignment="Top" Width="2"/>
+        <Image HorizontalAlignment="Left" Height="5" Margin="6,721,0,-645" VerticalAlignment="Top" Width="2"/>
         <TextBlock HorizontalAlignment="Left" Margin="332,611,0,-576" TextWrapping="Wrap" Text="KARAMBIT LIMITED EDITION DOPPLER" VerticalAlignment="Top" Height="46" Width="351" FontSize="20"/>
         <TextBlock HorizontalAlignment="Left" Margin="332,662,0,-608" TextWrapping="Wrap" Text="COLOR: GALACTIC PURPPLE" VerticalAlignment="Top" Width="165" Height="27"/>
         <TextBlock HorizontalAlignment="Left" Margin="332,708,0,-654" TextWrapping="Wrap" Text="PRECIO: $1200 MX" VerticalAlignment="Top" Width="165" Height="27"/>
