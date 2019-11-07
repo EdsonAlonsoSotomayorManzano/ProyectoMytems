@@ -5,28 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Mytems"
         mc:Ignorable="d"
-        Title="Chat Online" Height="450" Width="800">
+        Title="Chat Online" Height="450" Width="800" Background="#FFE2E2E2">
     <Grid Height="81" VerticalAlignment="Top" Background="#36B6FF" Margin="0,0,0,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="134*"/>
+            <ColumnDefinition Width="21*"/>
+            <ColumnDefinition Width="43*"/>
+        </Grid.ColumnDefinitions>
         <Image HorizontalAlignment="Left" Height="79" VerticalAlignment="Top" Width="97" Source="Images/LOGO1 (1).png"/>
-        <TextBox x:Name="txtSerch" Margin="96,19,307,0" Width="Auto" Height="34" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtSerch" Margin="96,19,51.258,0" Width="Auto" Height="34" VerticalAlignment="Top"/>
         <Button Content="GO!" HorizontalAlignment="Left" Margin="483,19,0,0" VerticalAlignment="Top" Width="42" Height="34" RenderTransformOrigin="0.242,0.522" Background="White"/>
-        <ComboBox HorizontalAlignment="Center" Margin="526,54,180,0" VerticalAlignment="Top" Width="86" RenderTransformOrigin="0.178,0.5" Height="27" BorderBrush="{x:Null}" Foreground="Black" OpacityMask="Black" SelectionChanged="ComboBox_SelectionChanged" Background="{x:Null}" SnapsToDevicePixels="True">
+        <ComboBox HorizontalAlignment="Center" Margin="526,54,8,0" VerticalAlignment="Top" Width="86" RenderTransformOrigin="0.178,0.5" Height="27" BorderBrush="{x:Null}" Foreground="Black" OpacityMask="Black" SelectionChanged="ComboBox_SelectionChanged" Background="{x:Null}" SnapsToDevicePixels="True" Grid.ColumnSpan="2">
             <ComboBoxItem Name="cbFav" Content="Favorites" Selector.IsSelected="True"/>
         </ComboBox>
-        <ComboBox Name="cbAcc" HorizontalAlignment="Center" Margin="612,54,92,0" Width="88">
+        <ComboBox Name="cbAcc" HorizontalAlignment="Center" Margin="75.742,54,92,0" Width="88" Grid.ColumnSpan="2" Grid.Column="1">
             <ComboBoxItem Content="MyAccount" Selector.IsSelected="True" Margin="-286,0,286,0"/>
             <ComboBoxItem Content="Porfile"/>
             <ComboBoxItem Content="Setting"/>
             <ComboBoxItem Content="Shopping"/>
         </ComboBox>
-        <Button HorizontalAlignment="Left" Margin="705,54,0,0" VerticalAlignment="Top" Width="53" Height="22" Cursor="No" Background="#FF150101" BorderBrush="LightGray" RenderTransformOrigin="0.585,0.682">
+        <Button HorizontalAlignment="Left" Margin="85,54,0,0" VerticalAlignment="Top" Width="53" Height="22" Cursor="No" Background="#FF150101" BorderBrush="LightGray" RenderTransformOrigin="0.585,0.682" Grid.Column="2">
             <Button.OpacityMask>
                 <ImageBrush ImageSource="Images/shoppingcart_80945.png" Stretch="Uniform"/>
             </Button.OpacityMask>
         </Button>
-        <Label Content="Mytems! the massive pixel market" HorizontalAlignment="Center" Height="24" Margin="550,19,10,0" VerticalAlignment="Top" Width="232" FontFamily="Bold"/>
+        <Label Content="Mytems! the massive pixel market" HorizontalAlignment="Center" Height="24" Margin="13.742,19,10,0" VerticalAlignment="Top" Width="232" FontFamily="Bold" Grid.ColumnSpan="2" Grid.Column="1"/>
         <Canvas HorizontalAlignment="Left" Height="81" VerticalAlignment="Top" Width="100"/>
-        <Canvas HorizontalAlignment="Left" Height="331" Margin="-1,89,0,-339" VerticalAlignment="Top" Width="793">
+        <Canvas HorizontalAlignment="Left" Height="331" Margin="-1,89,0,-339" VerticalAlignment="Top" Width="793" Grid.ColumnSpan="3">
             <Button Content="Send" Canvas.Left="317" Canvas.Top="277" Width="94" Height="29"/>
             <Border BorderBrush="Black" BorderThickness="1" Height="244" Canvas.Left="21" Canvas.Top="9" Width="387"/>
             <StackPanel Height="239" Canvas.Left="24" Canvas.Top="11" Width="381"/>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Mytems"
         mc:Ignorable="d"
-        Title="VentanaCompras" Height="700" Width="800" Background="#FFBEC8C9">
+        Title="VentanaCompras" Height="700" Width="800" Background="#FFBEC8C9" WindowState="Maximized">
     <Grid Height="81" VerticalAlignment="Top" Background="#36B6FF" Margin="0,0,0,0">
         <Image HorizontalAlignment="Left" Height="79" VerticalAlignment="Top" Width="97" Source="Images/LOGO1 (1).png"/>
         <TextBox x:Name="txtSerch" Margin="96,19,307,0" Width="Auto" Height="34" VerticalAlignment="Top"/>
@@ -25,16 +25,13 @@
             </Button.OpacityMask>
         </Button>
         <Label Content="Mytems! the massive pixel market" HorizontalAlignment="Center" Height="24" Margin="550,19,10,0" VerticalAlignment="Top" Width="232" FontFamily="Bold"/>
-        <Image HorizontalAlignment="Left" Height="236" Margin="36,148,0,-303" Source="Images/KARAMBIT.jpeg" VerticalAlignment="Top" Width="334" Stretch="Fill">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="Images/450_1000 (1).jpg"/>
-            </Image.OpacityMask>
-        </Image>
+        <Image Margin="36,148,422,-303"  Stretch="Fill"/>
+
         <TextBlock HorizontalAlignment="Left" Margin="431,148,0,-125" TextWrapping="Wrap" Text="KARAMBIT LIMITED EDITION DOPPLER" VerticalAlignment="Top" Height="58" Width="351" FontSize="20" FontWeight="Bold"/>
         <TextBlock HorizontalAlignment="Left" Margin="428,274,0,-224" TextWrapping="Wrap" Text="PRECIO: $0.00 MX" VerticalAlignment="Top" Width="205" Height="31" FontWeight="Bold"/>
         <Button HorizontalAlignment="Left" Height="36" Margin="431,326,0,-281" VerticalAlignment="Top" Width="177" Content="CONFIRM PURCHASE" Background="#36B6FF" Foreground="Black" x:Name="BtnBuyKnife" Click="BtnBuyKnife_Click" FontWeight="Bold"/>
         <TextBlock HorizontalAlignment="Left" Margin="36,406,0,-375" TextWrapping="Wrap" Background="#36B6FF" VerticalAlignment="Top" Height="50" Width="334" FontSize="22" FontWeight="Bold" TextAlignment="Center" ><Run Text="            "/><Run Text="f"/><Run Text="eatures:                    "/></TextBlock>
-        <TextBox x:Name="txtfeatures" Background="#FFDDF4FF" HorizontalAlignment="Left" Height="154" Margin="36,462,0,-535" TextWrapping="Wrap" Text="An excellent option for your perfect games.                  &#xD;&#xA;&#xD;&#xA;This weapon is an special edition and with an unique color." VerticalAlignment="Top" Width="334" FontSize="14" FontWeight="Bold" FontFamily="Tahoma"/>
+        <TextBox x:Name="txtfeatures" Background="#FFDDF4FF" HorizontalAlignment="Left" Height="154" Margin="36,462,0,-535" TextWrapping="Wrap" VerticalAlignment="Top" Width="334" FontSize="14" FontWeight="Bold" FontFamily="Tahoma"/>
         <ComboBox Name="cbColor" HorizontalAlignment="Left" Height="24" Margin="428,228,0,-171" VerticalAlignment="Top" Width="165" >
             <ComboBoxItem Content="Seleccione el color " Selector.IsSelected="True"/>
             <ComboBoxItem Content="Galactic purple"/>
@@ -42,7 +39,7 @@
             <ComboBoxItem Content="Blue sky"/>
 
         </ComboBox>
-                 
+
 
     </Grid>
 

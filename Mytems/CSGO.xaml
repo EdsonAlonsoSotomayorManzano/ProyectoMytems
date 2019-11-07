@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Mytems"
         mc:Ignorable="d"
-        Title="Mytems" Height="888.286" Width="800" Background="#FFE2E2E2">
+        Title="Mytems" Height="888.286" Width="800" Background="#FFE2E2E2" WindowState="Maximized">
     <Grid Height="81" VerticalAlignment="Top" Background="#36B6FF" Margin="0,0,0,0">
         <Image HorizontalAlignment="Left" Height="79" VerticalAlignment="Top" Width="97" Source="Images/LOGO1 (1).png"/>
         <TextBox x:Name="txtSerch" Margin="96,19,307,0" Width="Auto" Height="34" VerticalAlignment="Top"/>
