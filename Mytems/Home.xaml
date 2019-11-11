@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Mytems"
         mc:Ignorable="d"
-        Title="Mytems" Height="587" Width="800" Background="#FFE2E2E2" WindowState="Maximized">
+        Title="Mytems" Height="604.826" Width="774.534" Background="#FFE2E2E2" WindowState="Normal">
     <Window.Resources>
         <Style TargetType="TextBlock">
             <Setter Property="FontSize" Value="20"/>
@@ -18,8 +18,8 @@
             <Setter Property="Margin" Value="10"/>
         </Style>
     </Window.Resources>
-    <Grid Margin="0,0,0,475" Name="Grin1" Background="#36B6FF" AllowDrop="False">
-        <Image Source="images/LOGO1 (1).png" Margin="-4,-3,701,10" Height="75" VerticalAlignment="Bottom" RenderTransformOrigin="0.518,-0.053"/>
+    <Grid Name="Grin1" Background="#36B6FF" AllowDrop="False" Height="81" VerticalAlignment="Top" HorizontalAlignment="Left" Width="792">
+        <Image Source="images/LOGO1 (1).png" Margin="-4,-4,701,0" Height="75" VerticalAlignment="Top" RenderTransformOrigin="0.518,-0.053"/>
         <TextBox x:Name="txtSerch" Margin="96,10,307,0" Width="Auto" Height="34" VerticalAlignment="Top"/>
         <Button Content="GO!" HorizontalAlignment="Left" Margin="477,10,0,0" VerticalAlignment="Top" Width="42" Height="34" RenderTransformOrigin="0.242,0.522" Background="White">
             <Button.RenderTransform>
@@ -34,7 +34,7 @@
         <ComboBox HorizontalAlignment="Center" Margin="521,39,185,0" VerticalAlignment="Top" Width="86" RenderTransformOrigin="0.178,0.5" Height="27" BorderBrush="{x:Null}" Foreground="Black" OpacityMask="Black" SelectionChanged="ComboBox_SelectionChanged" Background="{x:Null}" SnapsToDevicePixels="True">
             <ComboBoxItem Name="cbFav" Content="Favorites" Selector.IsSelected="True"/>
         </ComboBox>
-        <ComboBox Name="cbAcc" HorizontalAlignment="Center" Margin="612,39,92,16" Width="88">
+        <ComboBox Name="cbAcc" HorizontalAlignment="Center" Margin="612,39,92,0" Width="88" Height="26" VerticalAlignment="Top">
             <ComboBoxItem Content="MyAccount" Selector.IsSelected="True" Margin="-286,0,286,0"/>
             <ComboBoxItem Content="Porfile"/>
             <ComboBoxItem Content="Setting"/>

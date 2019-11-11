@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Mytems"
         mc:Ignorable="d"
-        Title="Mytems" Height="564.584" Width="456.557" Background="#FFF0F0F0" ResizeMode="CanMinimize">
+        Title="Mytems" Height="564.584" Width="456.557" Background="#FFF0F0F0" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <Style TargetType="TextBlock">
             <Setter Property="FontSize" Value="20"/>
@@ -45,7 +45,7 @@
             </WrapPanel>
             <RadioButton x:Name="RbtnKL" Content="Keep me logged in" FontSize="15" Height="27" Margin="33,0,230,0" RenderTransformOrigin="0.487,0.531" />
             <Button x:Name="BtnLogin" Content="Log In" Margin="0,40,50,40" Height="40" Click="BtnLogin_Click" FontSize="20" Background="#FF00B9FF" ToolTip="Start" HorizontalAlignment="Right" Width="333" Grid.IsSharedSizeScope="True"/>
-            <Button x:Name="BtnLogin_Copy" Content="Register" Margin="0,-20,50,40" Height="40" Click="BtnLogin_Click" FontSize="20" Background="#FF00B9FF" ToolTip="Start" HorizontalAlignment="Right" Width="333" Grid.IsSharedSizeScope="True"/>
+            <Button x:Name="BtnRegister" Content="Register" Margin="0,-20,50,40" Height="40" Click="BtnRegister_Click" FontSize="20" Background="#FF00B9FF" ToolTip="Start" HorizontalAlignment="Right" Width="333" Grid.IsSharedSizeScope="True"/>
         </StackPanel>
     </DockPanel>
 </Window>

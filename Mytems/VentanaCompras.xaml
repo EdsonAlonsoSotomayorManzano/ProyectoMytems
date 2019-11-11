@@ -5,11 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Mytems"
         mc:Ignorable="d"
-        Title="VentanaCompras" Height="700" Width="800" Background="#FFBEC8C9" WindowState="Maximized">
-    <Grid Height="81" VerticalAlignment="Top" Margin="0,0,0,0">
-        <Grid.Background>
-            <ImageBrush/>
-        </Grid.Background>
+        Title="VentanaCompras" Height="700" Width="800" Background="#FFF0F0F0" WindowState="Normal">
+    <Grid Height="81" VerticalAlignment="Top" Margin="0,0,0,0" Background="#36B6FF">
         <Image HorizontalAlignment="Left" Height="79" VerticalAlignment="Top" Width="97" Source="Images/LOGO1 (1).png"/>
         <TextBox x:Name="txtSerch" Margin="96,19,307,0" Width="Auto" Height="34" VerticalAlignment="Top"/>
         <Button Content="GO!" HorizontalAlignment="Left" Margin="483,19,0,0" VerticalAlignment="Top" Width="42" Height="34" RenderTransformOrigin="0.242,0.522" Background="White" Click="Button_Click"/>

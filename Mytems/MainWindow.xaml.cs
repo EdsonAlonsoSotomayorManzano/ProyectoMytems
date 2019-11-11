@@ -36,5 +36,10 @@ namespace Mytems
             lobby.Show();
             this.Close();
         }
+
+        private void BtnRegister_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
