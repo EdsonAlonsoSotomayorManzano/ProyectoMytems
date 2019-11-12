@@ -1,0 +1,46 @@
+﻿<Window x:Name="Registers" x:Class="Mytems.Register"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mytems"
+        mc:Ignorable="d"
+        Title="Registers" Height="564.584" Width="461.244" Background="#FFF0F0F0" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="Margin" Value="10"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="Margin" Value="10"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="80*"/>
+        </Grid.RowDefinitions>
+        <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="453" Height="107" Margin="2,0,0,0">
+            <Image HorizontalAlignment="Left" Height="106" Margin="170,0,0,0" VerticalAlignment="Top" Width="116" Source="Images/LOGO1 (1).png"/>
+        </WrapPanel>
+        <WrapPanel Margin="0,0,0,129" Grid.Row="1">
+            <TextBlock Text="First Name:" Width="131"/>
+            <TextBox x:Name="txtFNAME"/>
+            <TextBlock Text="Last Name :" Width="131"/>
+            <TextBox x:Name="txtLNAME"/>
+            <TextBlock Text="Username :" Width="131"/>
+            <TextBox x:Name="txtUsarname"/>
+            <TextBlock Text="Email: " Width="131"/>
+            <TextBox x:Name="txtEmail"/>
+            <TextBlock Text="Password: " Width="131"/>
+            <TextBox x:Name="txtPass"/>
+            <TextBlock Text="Confirm Password: " Width="131"/>
+            <TextBox x:Name="txtConfPass"/>
+        </WrapPanel>
+        <Button Content="LEST GO!" HorizontalAlignment="Left" Margin="100,335,0,0" Grid.Row="1" VerticalAlignment="Top" Width="258" Height="41" Background="#FF00B9FF" Click="Button_Click"/>
+
+    </Grid>
+</Window>

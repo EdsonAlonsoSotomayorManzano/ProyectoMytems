@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Mytems
 {
     /// <summary>
-    /// Lógica de interacción para Home.xaml
+    /// Lógica de interacción para CSGO.xaml
     /// </summary>
-    public partial class Home : Window
+    public partial class Items : Window
     {
-        public Home()
+        public Items()
         {
             InitializeComponent();
         }
@@ -29,11 +29,19 @@ namespace Mytems
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void CbAcc_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Items ItemWindow = new Items();
-            ItemWindow.Show();
-            this.Close();
+
+        }
+
+        private void BtnBuyAWP_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnBuyKnife_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

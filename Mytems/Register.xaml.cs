@@ -15,33 +15,20 @@ using System.Windows.Shapes;
 namespace Mytems
 {
     /// <summary>
-    /// Lógica de interacción para CSGO.xaml
+    /// Lógica de interacción para Registro.xaml
     /// </summary>
-    public partial class CSGO : Window
+    public partial class Register : Window
     {
-        public CSGO()
+        public Register()
         {
             InitializeComponent();
         }
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void CbAcc_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void BtnBuyAWP_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void BtnBuyKnife_Click(object sender, RoutedEventArgs e)
-        {
-
+            MainWindow login =  new MainWindow();
+            login.Show();
+            this.Close(); 
         }
     }
 }

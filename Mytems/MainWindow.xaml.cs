@@ -35,11 +35,14 @@ namespace Mytems
             Home lobby = new Home();
             lobby.Show();
             this.Close();
+            MessageBox.Show("Welcome PLAYER! :D");
         }
 
         private void BtnRegister_Click(object sender, RoutedEventArgs e)
         {
-
+            Register Regiswindow = new Register();
+            Regiswindow.Show();
+            this.Close();
         }
     }
 }

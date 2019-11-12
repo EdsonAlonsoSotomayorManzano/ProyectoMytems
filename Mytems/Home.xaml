@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Mytems"
         mc:Ignorable="d"
-        Title="Mytems" Height="604.826" Width="774.534" Background="#FFE2E2E2" WindowState="Normal" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="Mytems" Height="604.826" Width="774.534" Background="#FFE2E2E2" WindowState="Normal" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
     <Window.Resources>
         <Style TargetType="TextBlock">
             <Setter Property="FontSize" Value="20"/>
@@ -61,3 +61,4 @@
         <Button Content="See More" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Margin="566,506,0,-458" Height="33" Background="#36B6FF"/>
     </Grid>
 </Window>
+
