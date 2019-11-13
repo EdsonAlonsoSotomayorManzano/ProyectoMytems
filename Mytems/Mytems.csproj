@@ -58,12 +58,19 @@
     <Compile Include="Chat.xaml.cs">
       <DependentUpon>Chat.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Coins.xaml.cs">
+      <DependentUpon>Coins.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Register.xaml.cs">
       <DependentUpon>Register.xaml</DependentUpon>
     </Compile>
     <Compile Include="VentanaCompras.xaml.cs">
       <DependentUpon>VentanaCompras.xaml</DependentUpon>
     </Compile>
+    <Page Include="Coins.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Items.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -161,6 +168,20 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\AWP.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Coin1.jpeg" />
+    <Resource Include="Images\Coin2.jpeg" />
+    <Resource Include="Images\Coin3.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Oxxo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Credito.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Paypal.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
