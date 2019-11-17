@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Mytems.Clases;
+using SQLite;
 
 namespace Mytems
 {
@@ -26,6 +28,21 @@ namespace Mytems
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            Registro registro = new Registro()
+            {
+                Name = txtFNAME.Text,
+                Lastname = txtLNAME.Text,
+                Username = txtUsarname.Text,
+                Password = txtPass.Text,
+                Email = txtEmail.Text
+            };
+
+            using (SQLiteConnection conexion = new  SQLiteConnection(App.databasePath))
+            {
+                conexion.CreateTable<Register>();
+                conexion.Insert(registro);
+            }
+
             MainWindow login =  new MainWindow();
             login.Show();
             this.Close(); 
