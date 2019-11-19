@@ -28,14 +28,18 @@
             </Button.OpacityMask>
         </Button>
         <Label Content="Mytems! the massive pixel market" HorizontalAlignment="Center" Height="24" Margin="551,19,11,0" VerticalAlignment="Top" Width="232" FontFamily="Bold"/>
-        <Image x:Name="Image" Height="152" Margin="96,112,96,-183" VerticalAlignment="Top" Source="Images/header_586x192.jpg" Stretch="Fill"/>
-        <Image HorizontalAlignment="Left" Height="152" Margin="96,361,0,-432" VerticalAlignment="Top" Width="214"  Stretch="Fill"/>
-        <TextBlock x:Name="NameOBJ" HorizontalAlignment="Left" Margin="332,361,0,-326" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="46" Width="364" FontSize="20"/>
-        <TextBlock x:Name="ColorOBJ" HorizontalAlignment="Left" Margin="332,412,0,-358" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="165" Height="27"/>
-        <TextBlock x:Name="PriceOBJ" HorizontalAlignment="Left" Margin="332,457,0,-403" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="165" Height="27"/>
-        <Button HorizontalAlignment="Left" Height="27" Margin="526,457,0,-403" VerticalAlignment="Top" Width="157" Content="BUY" Background="#36B6FF" Foreground="Black" x:Name="BtnBuyOBJ" Click="BtnBuyAWP_Click"/>
-        <Label HorizontalAlignment="Left" Height="1" Background="Black" Margin="96,565,0,-485" HorizontalContentAlignment="Center" VerticalAlignment="Top" Width="600"/>
+        <Image x:Name="Image" Height="152" Margin="82,130,110,-201" VerticalAlignment="Top" Source="Images/header_586x192.jpg" Stretch="Fill"/>
+        <Label HorizontalAlignment="Left" Height="1" Background="Black" Margin="82,583,0,-503" HorizontalContentAlignment="Center" VerticalAlignment="Top" Width="600"/>
         <Image HorizontalAlignment="Left" Height="5" Margin="6,721,0,-645" VerticalAlignment="Top" Width="2"/>
+        <StackPanel x:Name="spitem" HorizontalAlignment="Left" Height="271" Margin="82,287,0,-477" VerticalAlignment="Top" Width="600">
+            <TextBlock x:Name="NameOBJ" HorizontalAlignment="Left" Margin="236,60,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="46" Width="363" FontSize="20"/>
+            <TextBlock x:Name="ColorOBJ" HorizontalAlignment="Left" Margin="236,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="164" Height="27" />
+            <TextBlock x:Name="PriceOBJ" HorizontalAlignment="Left" Margin="236,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="164" Height="27"/>
+            <Button HorizontalAlignment="Left" Height="27" Margin="429,0,0,0" VerticalAlignment="Top" Width="157" Content="BUY" Background="#36B6FF" Foreground="Black" x:Name="BtnBuyOBJ" Click="BtnBuyAWP_Click"/>
+            <Image HorizontalAlignment="Left" Height="152" VerticalAlignment="Top" Width="214"  Stretch="Fill" Margin="20,-160,0,0"/>
+
+        </StackPanel>
+
 
     </Grid>
 </Window>
