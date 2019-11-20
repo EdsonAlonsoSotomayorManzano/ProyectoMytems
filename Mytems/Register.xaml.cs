@@ -34,18 +34,23 @@ namespace Mytems
                 Lastname = txtLNAME.Text,
                 Username = txtUsarname.Text,
                 Password = txtPass.Text,
+                ConfPass = txtConfPass.Text,
                 Email = txtEmail.Text
             };
 
-            using (SQLiteConnection conexion = new  SQLiteConnection(App.databasePath))
+            using (SQLiteConnection conn = new  SQLiteConnection(App.databasePath))
             {
-                conexion.CreateTable<Register>();
-                conexion.Insert(registro);
+                conn.CreateTable<Registro>();
+                conn.Insert(registro);
             }
+
+            MessageBox.Show("User Registered");
 
             MainWindow login =  new MainWindow();
             login.Show();
-            this.Close(); 
+            this.Close();
+
+           
         }
     }
 }
