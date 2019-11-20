@@ -26,7 +26,7 @@
         <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="453" Height="107" Margin="2,0,0,0">
             <Image HorizontalAlignment="Left" Height="106" Margin="170,0,0,0" VerticalAlignment="Top" Width="116" Source="Images/LOGO1 (1).png"/>
         </WrapPanel>
-        <WrapPanel Margin="0,0,0,129" Grid.Row="1">
+        <WrapPanel Margin="0,0,0,160" Grid.Row="1">
             <TextBlock Text="First Name:" Width="131"/>
             <TextBox x:Name="txtFNAME"/>
             <TextBlock Text="Last Name :" Width="131"/>
@@ -37,10 +37,9 @@
             <TextBox x:Name="txtEmail"/>
             <TextBlock Text="Password: " Width="131"/>
             <TextBox x:Name="txtPass"/>
-            <TextBlock Text="Confirm Password: " Width="131"/>
-            <TextBox x:Name="txtConfPass"/>
+         
         </WrapPanel>
-        <Button Content="LEST GO!" HorizontalAlignment="Left" Margin="100,335,0,0" Grid.Row="1" VerticalAlignment="Top" Width="258" Height="41" Background="#FF00B9FF" Click="Button_Click"/>
+        <Button Content="LEST GO!" HorizontalAlignment="Left" Margin="97,293,0,0" Grid.Row="1" VerticalAlignment="Top" Width="258" Height="41" Background="#FF00B9FF" Click="Button_Click"/>
 
     </Grid>
 </Window>
