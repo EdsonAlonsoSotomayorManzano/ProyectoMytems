@@ -39,7 +39,7 @@ namespace Mytems
 
             using (SQLiteConnection conexion = new  SQLiteConnection(App.databasePath))
             {
-                conexion.CreateTable<Register>();
+                conexion.CreateTable<Registro>();
                 conexion.Insert(registro);
             }
 

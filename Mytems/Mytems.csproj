@@ -88,15 +88,15 @@
     <Compile Include="Chat.xaml.cs">
       <DependentUpon>Chat.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Classes\Compradores.cs" />
-    <Compile Include="Classes\CsGo.cs" />
-    <Compile Include="Classes\Fortinte.cs" />
-    <Compile Include="Classes\Lol.cs" />
-    <Compile Include="Classes\Minecraft.cs" />
-    <Compile Include="Classes\Pokemon.cs" />
-    <Compile Include="Classes\Registro.cs" />
-    <Compile Include="Classes\Sellers.cs" />
-    <Compile Include="Classes\Warcraft.cs" />
+    <Compile Include="Clases\Compradores.cs" />
+    <Compile Include="Clases\CsGo.cs" />
+    <Compile Include="Clases\Fortinte.cs" />
+    <Compile Include="Clases\Lol.cs" />
+    <Compile Include="Clases\Minecraft.cs" />
+    <Compile Include="Clases\Pokemon.cs" />
+    <Compile Include="Clases\Registro.cs" />
+    <Compile Include="Clases\Sellers.cs" />
+    <Compile Include="Clases\Warcraft.cs" />
     <Compile Include="Coins.xaml.cs">
       <DependentUpon>Coins.xaml</DependentUpon>
     </Compile>

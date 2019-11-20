@@ -22,7 +22,7 @@ namespace Mytems.Clases
 
         public override string ToString()
         {
-            return $"{Name}-{Lastname}-{Username}-{Email}-{Password}";
+            return $"{Name} - {Lastname} - {Username} - {Email} - {Password}";
         }
 
     }
