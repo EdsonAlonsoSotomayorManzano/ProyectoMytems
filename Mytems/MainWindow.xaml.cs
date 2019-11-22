@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.OleDb;
+using System.Data;
 
 namespace Mytems
 {
@@ -32,10 +34,25 @@ namespace Mytems
 
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
-            Home lobby = new Home();
-            lobby.Show();
-            this.Close();
-            MessageBox.Show("Welcome PLAYER! :D");
+
+            if ( txtUsarname.Text !="")
+            {
+                if (txtPassword.Text !="")
+                {
+                    MessageBox.Show("Porfavor Ingrese Usuario y Contraseña");
+                }
+            }
+            else if (txtUsarname.IsEnabled==true)
+            {
+                if (txtPassword.IsEnabled==true)
+                {
+
+                }
+            }
+           
+
+           
+            
         }
 
         private void BtnRegister_Click(object sender, RoutedEventArgs e)
