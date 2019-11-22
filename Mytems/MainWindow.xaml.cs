@@ -44,7 +44,7 @@ namespace Mytems
             }
             else if (txtUsarname.IsEnabled==true)
             {
-                if (txtPassword.IsEnabled==true)
+                if (txtPassword.IsEnabled==true)    
                 {
 
                 }
