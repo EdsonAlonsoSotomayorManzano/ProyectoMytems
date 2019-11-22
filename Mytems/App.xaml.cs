@@ -13,8 +13,6 @@ namespace Mytems
     /// </summary>
     public partial class App : Application
     {
-        static string databaseName = "Mytemstrade.db";
-        static string folderpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-        public static string databasePath = System.IO.Path.Combine(folderpath, databaseName);
+        
     }
 }

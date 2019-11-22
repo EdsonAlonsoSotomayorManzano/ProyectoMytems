@@ -36,7 +36,7 @@
             <TextBlock Text="Email: " Width="131"/>
             <TextBox x:Name="txtEmail"/>
             <TextBlock Text="Password: " Width="131"/>
-            <TextBox x:Name="txtPass"/>
+            <TextBox x:Name="txtPass" />
             <TextBlock Text="Confirm Password: " Width="123" Height="25"/>
             <TextBox x:Name="txtConfPass"/>
 

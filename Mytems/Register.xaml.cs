@@ -11,8 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Mytems.Clases;
-using SQLite;
+using System.Data.OleDb;
+using System.Data;
 
 namespace Mytems
 {
@@ -21,30 +21,59 @@ namespace Mytems
     /// </summary>
     public partial class Register : Window
     {
+
+        OleDbConnection con;
+        DataTable dt;
         public Register()
         {
             InitializeComponent();
+            con = new OleDbConnection();
+            con.ConnectionString = "Provider=Microsoft.Jet.Oledb.4.0; Data Source=" + AppDomain.CurrentDomain.BaseDirectory + "\\MytemsDB.mdb";
+            MostrarDatos();
+
+        }
+        private void MostrarDatos()
+        {
+            OleDbCommand cmd = new OleDbCommand();
+            if (con.State != ConnectionState.Open)
+                con.Open();
+            cmd.Connection = con;
+            cmd.CommandText = " Select * from Register";
+            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+            dt = new DataTable();
+            da.Fill(dt);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Registro registro = new Registro()
+            OleDbCommand cmd = new OleDbCommand();
+            if (con.State != ConnectionState.Open)
+                con.Open();
+            cmd.Connection = con;
+             if (txtFNAME.Text !="")
             {
-                Name = txtFNAME.Text,
-                Lastname = txtLNAME.Text,
-                Username = txtUsarname.Text,
-                Password = txtPass.Text,
-                ConfPass = txtConfPass.Text,
-                Email = txtEmail.Text
-            };
-
-            using (SQLiteConnection conn = new  SQLiteConnection(App.databasePath))
+                if (txtFNAME.IsEnabled==true)
+                {
+                    cmd.CommandText = "insert into Register (Firstname, Lastname, Us, Email, Pass, ConfirmPassword)  Values('" + txtFNAME.Text +
+                     "','" + txtLNAME.Text + "','" + txtUsarname.Text + "','" + txtEmail.Text + "','" + txtPass.Text + "','" + txtConfPass.Text + "')";
+                    cmd.ExecuteNonQuery();
+                    MostrarDatos();
+                    if (txtConfPass.Text != txtPass.Text)
+                    {
+                        MessageBox.Show("The Password is not the same");
+                    }
+                    else
+                    {
+                        MessageBox.Show("User Registered Succesfully");
+                    }
+                }
+            }
+            else
             {
-                conn.CreateTable<Registro>();
-                conn.Insert(registro);
+                MessageBox.Show("Empty field");
             }
 
-            MessageBox.Show("User Registered");
+            
 
             MainWindow login =  new MainWindow();
             login.Show();
