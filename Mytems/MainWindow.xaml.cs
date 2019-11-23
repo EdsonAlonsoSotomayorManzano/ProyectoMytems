@@ -56,7 +56,7 @@ namespace Mytems
             cmd.Connection = con;
             
             {
-                string constring = "Provider=Microsoft.Jet.Oledb.4.0; Data Source=" + AppDomain.CurrentDomain.BaseDirectory + "\\MytemsDB.mdb";
+                string constring = "Provider=Microsoft.Jet.Oledb.4.0; Data Source=" + AppDomain.CurrentDomain.BaseDirectory + "\\MytemsDB.mdb";   
                 string comandText = "select Count(*) from Login where txtUsarname=? and [txtPassword]=?";
                 using (OleDbConnection con = new OleDbConnection(constring))
                 using (OleDbCommand command = new OleDbCommand(comandText, con))
