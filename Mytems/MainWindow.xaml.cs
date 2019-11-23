@@ -15,6 +15,8 @@ using System.Windows.Shapes;
 using System.Data.OleDb;
 using System.Data;
 
+
+
 namespace Mytems
 {
     /// <summary>
@@ -23,25 +25,14 @@ namespace Mytems
     public partial class MainWindow : Window
     {
 
-        OleDbConnection con;
+     
         
         public MainWindow()
         {
             InitializeComponent();
-            con = new OleDbConnection();
-            con.ConnectionString = "Provider=Microsoft.Jet.Oledb.4.0; Data Source=" + AppDomain.CurrentDomain.BaseDirectory + "\\MytemsDB.mdb";
-            MostrarDatos();
+           
         }
-        private void MostrarDatos()
-        {
-            OleDbCommand cmd = new OleDbCommand();
-            if (con.State != ConnectionState.Open)
-                con.Open();
-            cmd.Connection = con;
-            cmd.CommandText = " Select * from Register";
-            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
-            
-        }
+        OleDbConnection Conexion = new OleDbConnection ("Provider=Microsoft.Jet.Oledb.4.0; Data Source=" + AppDomain.CurrentDomain.BaseDirectory + "\\MytemsDB.mdb");
 
         private void btnFPass_Click(object sender, RoutedEventArgs e)
         {
@@ -49,41 +40,46 @@ namespace Mytems
         }
 
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
+
         {
-            OleDbCommand cmd = new OleDbCommand();
-            if (con.State != ConnectionState.Open)
-                con.Open();
-            cmd.Connection = con;
-            
+                                                  
+            Conexion.Open();
+
+            //: Aquí especificamos los campos a tomar con sus textbox correspondientes
+            String Consulta = "select Pass, Email from Registrer where txtPassword ='" + txtPassword.Text + "' and txtUsarname ='" + txtUsarname.Text + "'";
+
+            //: Aquí Creamos una variable para unir la consulta y la conexion
+            OleDbCommand Comando = new OleDbCommand(Consulta, Conexion);
+
+            //:Creamos una variable para leer los datos
+            OleDbDataReader LectorDatos;
+
+            //: Aquí ejecutamos el lector de datos
+            LectorDatos = Comando.ExecuteReader();
+
+            //: Aquí creamos una variable booleana para ver si existe el registro
+            bool ExistenciaRegistros = LectorDatos.HasRows;
+            if (ExistenciaRegistros)
             {
-                string constring = "Provider=Microsoft.Jet.Oledb.4.0; Data Source=" + AppDomain.CurrentDomain.BaseDirectory + "\\MytemsDB.mdb";   
-                string comandText = "select Count(*) from Login where txtUsarname=? and [txtPassword]=?";
-                using (OleDbConnection con = new OleDbConnection(constring))
-                using (OleDbCommand command = new OleDbCommand(comandText, con))
-                {
-                    con.Open();
-                    cmd.Parameters.AddWithValue("@p1", txtUsarname.Text);
-                    cmd.Parameters.AddWithValue("@p2", txtPassword.Text);  // <- is this a variable or a textbox?
-                    int result = (int)cmd.ExecuteScalar();
-                    if (result <0)
-                    {
-                        Register Regiswindow = new Register();
-                        Regiswindow.Show();
-                        this.Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Invalid Credentials, Please Re-Enter");
-                    }
-                }
+                //: SI existe el registro mostrar el form siguiente
+                MessageBox.Show("Bienvenido " + txtUsarname.Text);
+
+
+                Register Regiswindow = new Register();
+                Regiswindow.Show();
+                this.Close();
             }
 
-           
+            else
+            {
+
+                //: SI no existe volver al paso de logueo
+                MessageBox.Show("Acceso denegado " + txtUsarname.Text, "Usuario NO encontrado");
 
 
+                return;
 
-
-
+            }
         }
 
         private void BtnRegister_Click(object sender, RoutedEventArgs e)
@@ -92,5 +88,11 @@ namespace Mytems
             Regiswindow.Show();
             this.Close();
         }
+
+
     }
+
+
+     
+    
 }
