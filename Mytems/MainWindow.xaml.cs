@@ -65,8 +65,8 @@ namespace Mytems
                 {
                     if (txtUsarname.IsEnabled == true)
                     {
-                        cmd.CommandText = "select [id_Usuario], from Register where[Us]= " + this.txtUsarname + "and[Pass]= " + this.txtPassword + "";
-                        if (txtPassword != ' [Pass] ')
+                        cmd.CommandText = "select * from Register where[Us]= " + User + "and[Pass]= " + Password + "";
+                        if (txtPassword.Text != Password)
                         {
                             MessageBox.Show("The Password is incorrect");
                         }
