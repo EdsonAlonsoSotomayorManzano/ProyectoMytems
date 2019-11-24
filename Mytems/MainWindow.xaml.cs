@@ -26,6 +26,7 @@ namespace Mytems
     {
 
         OleDbConnection con;
+        DataTable dt;
 
         public MainWindow()
         {
@@ -65,8 +66,11 @@ namespace Mytems
                 {
                     if (txtUsarname.IsEnabled == true)
                     {
-                        cmd.CommandText = "select * from Register where[Us]= " + User + "and[Pass]= " + Password + "";
-                        if (txtPassword.Text != Password)
+                        cmd.CommandText = "select * from Register where[Us]= " + User;
+                        OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+                        dt = new DataTable();
+                        da.Fill(dt);
+                        if (txtPassword.Text != dt.Rows[0]["Pass"].ToString().Trim())
                         {
                             MessageBox.Show("The Password is incorrect");
                         }
