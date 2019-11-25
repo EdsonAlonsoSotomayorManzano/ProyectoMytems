@@ -19,7 +19,7 @@
         </Style>
     </Window.Resources>
     <Grid Name="Grin1" Background="#36B6FF" AllowDrop="False" Height="81" VerticalAlignment="Top" HorizontalAlignment="Right" Width="805" Margin="0,0,-36,0">
-        <Button x:Name="MYCOINS" Content="MyCoins" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Height="25" Margin="612,92,0,-36" VerticalAlignment="Top" Width="88" RenderTransformOrigin="0.689,0.293" Click="MYCOINS_Click" >
+        <Button x:Name="MYCOINS" Content="MyCoins" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Height="26" Margin="618,94,0,-39" VerticalAlignment="Top" Width="88" RenderTransformOrigin="0.689,0.293" Click="MYCOINS_Click" >
             <Button.Background>
                 <ImageBrush ImageSource="Images/mycoinlogo4.jpg"/>
             </Button.Background>
