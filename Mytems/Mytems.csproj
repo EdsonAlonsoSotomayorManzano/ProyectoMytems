@@ -199,6 +199,8 @@
   <ItemGroup>
     <Resource Include="Images\Paypal.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\mycoinlogo4.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

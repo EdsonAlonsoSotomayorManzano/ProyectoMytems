@@ -61,25 +61,31 @@ namespace Mytems
             }
             else
             {
-                OleDbConnection oleDbConnection = new OleDbConnection();
                 if (txtUsarname.Text != "")
                 {
                     if (txtUsarname.IsEnabled == true)
                     {
-                        cmd.CommandText = "select * from Register where[Us]= " + User;
-                        OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+                        cmd.CommandText = "Select * from Register where Us = '" + txtUsarname.Text.Trim() + "'";
+                        OleDbDataAdapter da = new OleDbDataAdapter(cmd.CommandText, con.ConnectionString);
                         dt = new DataTable();
                         da.Fill(dt);
-                        if (txtPassword.Text != dt.Rows[0]["Pass"].ToString().Trim())
+                        if (dt.Rows.Count>0)
                         {
-                            MessageBox.Show("The Password is incorrect");
+                            if (txtPassword.Text != dt.Rows[0]["Pass"].ToString().Trim())
+                            {
+                                MessageBox.Show("The Password is incorrect");
+                            }
+                            else
+                            {
+                                Home Home = new Home();
+                                this.Hide();
+                                Home.Show();
+                                MessageBox.Show("Welcome Pleyer :D");
+                            }
                         }
                         else
                         {
-                            Home Home = new Home();
-                            this.Hide();
-                            Home.Show();
-                            MessageBox.Show("Welcome Pleyer :D");
+                            MessageBox.Show("The Username is incorrect");
                         }
                     }
                 }

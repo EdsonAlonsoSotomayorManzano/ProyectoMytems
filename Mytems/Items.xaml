@@ -28,7 +28,7 @@
             </Button.OpacityMask>
         </Button>
         <Label Content="Mytems! the massive pixel market" HorizontalAlignment="Center" Height="24" Margin="551,19,11,0" VerticalAlignment="Top" Width="232" FontFamily="Bold"/>
-        <Image x:Name="Image" Height="152" Margin="82,130,110,-201" VerticalAlignment="Top" Source="Images/header_586x192.jpg" Stretch="Fill"/>
+        <Image x:Name="Image" Height="152" Margin="82,130,110,-201" VerticalAlignment="Top"  Stretch="Fill"/>
         <Label HorizontalAlignment="Left" Height="1" Background="Black" Margin="82,583,0,-503" HorizontalContentAlignment="Center" VerticalAlignment="Top" Width="600"/>
         <Image HorizontalAlignment="Left" Height="5" Margin="6,721,0,-645" VerticalAlignment="Top" Width="2"/>
         <StackPanel x:Name="spitem" HorizontalAlignment="Left" Height="271" Margin="82,287,0,-477" VerticalAlignment="Top" Width="600">

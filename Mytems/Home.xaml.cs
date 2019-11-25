@@ -19,9 +19,11 @@ namespace Mytems
     /// </summary>
     public partial class Home : Window
     {
+        Items ItemWindow = new Items();
         public Home()
         {
             InitializeComponent();
+            
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -31,15 +33,45 @@ namespace Mytems
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
-            Items ItemWindow = new Items();
             ItemWindow.Show();
             this.Close();
         }
 
         private void btnminecraft_Click(object sender, RoutedEventArgs e)
         {
-            
+            ItemWindow.Show();
+            this.Close();
+        }
+
+        private void btnLol_Click(object sender, RoutedEventArgs e)
+        {
+            ItemWindow.Show();
+            this.Close();
+        }
+
+        private void btnpokemon_Click(object sender, RoutedEventArgs e)
+        {
+            ItemWindow.Show();
+            this.Close();
+        }
+
+        private void btnwarcraft_Click(object sender, RoutedEventArgs e)
+        {
+            ItemWindow.Show();
+            this.Close();
+        }
+
+        private void btnFortnite_Click(object sender, RoutedEventArgs e)
+        {
+            ItemWindow.Show();
+            this.Close();
+        }
+
+        private void MYCOINS_Click(object sender, RoutedEventArgs e)
+        {
+            Coins coinswindows = new Coins();
+            coinswindows.Show();
+            this.Close();
         }
     }
 }

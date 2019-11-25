@@ -14,9 +14,9 @@
         <Image Source="Images/Oxxo.png" Margin="101,265,503.6,89"/>
         <Image Source="Images/Paypal.png" Margin="110,170,507.6,180"/>
         <Image Source="Images/Credito.jpg" Margin="113,89,501.6,266"/>
-        <Button Content="[] 30 []" HorizontalAlignment="Left" Margin="337,176,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.682,0.444" FontFamily="Segoe UI Historic" FontSize="14"/>
-        <Button Content="[] 150 []" HorizontalAlignment="Left" Margin="477,176,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.239,-0.522" FontFamily="Segoe UI Historic" FontSize="14"/>
-        <Button Content="[] 600 []" HorizontalAlignment="Left" Margin="651,176,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.471,-0.6" FontFamily="Segoe UI Historic" FontSize="14"/>
+        <Button Content=" 30 ©" HorizontalAlignment="Left" Margin="337,176,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.682,0.444" FontFamily="Segoe UI Historic" FontSize="14"/>
+        <Button Content=" 150 ©" HorizontalAlignment="Left" Margin="477,176,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.239,-0.522" FontFamily="Segoe UI Historic" FontSize="14"/>
+        <Button Content=" 600 ©" HorizontalAlignment="Left" Margin="651,176,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.471,-0.6" FontFamily="Segoe UI Historic" FontSize="14"/>
         <Label Content="$ 50 MXN" HorizontalAlignment="Left" Margin="332,20,0,0" VerticalAlignment="Top" Width="82" RenderTransformOrigin="0.607,0.82" FontFamily="Segoe UI Black" FontSize="14"/>
         <Label Content="$ 200 MXN" HorizontalAlignment="Left" Margin="470,18,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="14"/>
         <Label Content="$ 700 MXN" HorizontalAlignment="Left" Margin="646,17,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="14"/>
@@ -26,20 +26,21 @@
         <Image  Source="Images/Coin1.jpeg" Margin="318,250,370.6,69"/>
         <Image  Source="Images/Coin2.jpeg" Margin="454,250,217.6,73"/>
         <Image  Source="Images/Coin3.jpeg" Margin="619,250,36.6,77"/>
-        <Button Content="[] 70 []" HorizontalAlignment="Left" Margin="337,378,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.682,0.444" FontSize="14" FontFamily="Segoe UI Historic"/>
-        <Button Content="[] 400 []" HorizontalAlignment="Left" Margin="477,378,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.239,-0.522" FontSize="14" FontFamily="Segoe UI Historic"/>
-        <Button Content="[] 900 []" HorizontalAlignment="Left" Margin="651,378,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.471,-0.6" FontSize="14" FontFamily="Segoe UI Historic"/>
+        <Button Content="  70 ©" HorizontalAlignment="Left" Margin="337,378,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.682,0.444" FontSize="14" FontFamily="Segoe UI Historic"/>
+        <Button Content=" 400 ©" HorizontalAlignment="Left" Margin="477,378,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.239,-0.522" FontSize="14" FontFamily="Segoe UI Historic"/>
+        <Button Content=" 900 ©" HorizontalAlignment="Left" Margin="651,378,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.471,-0.6" FontSize="14" FontFamily="Segoe UI Historic"/>
         <Label Content="$ 100 MXN" HorizontalAlignment="Left" Margin="329,224,0,0" VerticalAlignment="Top" Width="88" RenderTransformOrigin="0.607,0.82" FontFamily="Segoe UI Black" FontSize="14"/>
         <Label Content="$ 500 MXN" HorizontalAlignment="Left" Margin="472,224,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="14"/>
         <Label Content="$ 1000 MXN" HorizontalAlignment="Left" Margin="642,224,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="14"/>
         <Label Content="70 Coins" HorizontalAlignment="Left" Margin="336,350,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Segoe UI Black"/>
         <Label Content="400 Coins" HorizontalAlignment="Left" Margin="477,350,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Segoe UI Black"/>
         <Label Content="900 Coins" HorizontalAlignment="Left" Margin="652,350,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Segoe UI Black"/>
-        <TextBox Background="AliceBlue" HorizontalAlignment="Left" Height="43" Margin="28,365,0,0" TextWrapping="Wrap" Text="Al seleccionar un paquete de MyTems acepta los Términos de Servicio y Política de Rembolso." VerticalAlignment="Top" Width="272" FontFamily="Segoe UI Semilight"/>
+        <TextBox Background="AliceBlue" HorizontalAlignment="Left" Height="43" Margin="28,365,0,0" TextWrapping="Wrap" Text="
+By selecting a MyTems package you accept the Terms of Service and Refund Policy." VerticalAlignment="Top" Width="272" FontFamily="Segoe UI Semilight"/>
         <Label Content="Selecciona Método de Pago" HorizontalAlignment="Left" Margin="84,24,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Semibold" FontSize="14"/>
-        <RadioButton Content="" HorizontalAlignment="Left" Margin="67,117,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="" HorizontalAlignment="Left" Margin="67,202,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="" HorizontalAlignment="Left" Margin="67,287,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rbTarjeta" Content="" HorizontalAlignment="Left" Margin="67,117,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rbPayPal" Content="" HorizontalAlignment="Left" Margin="67,202,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rbOxxo" Content="" HorizontalAlignment="Left" Margin="67,287,0,0" VerticalAlignment="Top"/>
 
 
     </Grid>
