@@ -21,7 +21,7 @@ namespace Mytems
     /// </summary>
     public partial class Register : Window
     {
-
+        
         OleDbConnection con;
         DataTable dt;
         public Register()
@@ -55,10 +55,10 @@ namespace Mytems
                 if (txtFNAME.IsEnabled==true)
                 {
                     cmd.CommandText = "insert into Register (Firstname, Lastname, Us, Email, Pass, ConfirmPassword)  Values('" + txtFNAME.Text +
-                     "','" + txtLNAME.Text + "','" + txtUsarname.Text + "','" + txtEmail.Text + "','" + txtPass.Text + "','" + txtConfPass.Text + "')";
+                     "','" + txtLNAME.Text + "','" + txtUsarname.Text + "','" + txtEmail.Text + "','" + pass.Password + "','" + confpass.Password + "')";
                     cmd.ExecuteNonQuery();
                     MostrarDatos();
-                    if (txtConfPass.Text != txtPass.Text)
+                    if (confpass.Password != pass.Password)
                     {
                         MessageBox.Show("The Password is not the same");
                     }
@@ -80,6 +80,11 @@ namespace Mytems
             this.Close();
 
            
+        }
+
+        private void TxtPass_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -52,7 +52,7 @@ namespace Mytems
                 con.Open();
             cmd.Connection = con;
             string User = this.txtUsarname.Text;
-            string Password = this.txtPassword.Text;
+            string Password = this.passbd.Password;
             if (User == "" || Password == "")
             {
                 MessageBox.Show("Insert User Name and Password");
@@ -71,7 +71,7 @@ namespace Mytems
                         da.Fill(dt);
                         if (dt.Rows.Count>0)
                         {
-                            if (txtPassword.Text != dt.Rows[0]["Pass"].ToString().Trim())
+                            if (passbd.Password != dt.Rows[0]["Pass"].ToString().Trim())
                             {
                                 MessageBox.Show("The Password is incorrect");
                             }

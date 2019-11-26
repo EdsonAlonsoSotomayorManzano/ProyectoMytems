@@ -36,9 +36,9 @@
             <TextBlock Text="Email: " Width="131"/>
             <TextBox x:Name="txtEmail"/>
             <TextBlock Text="Password: " Width="131"/>
-            <TextBox x:Name="txtPass" />
+            <PasswordBox x:Name="pass" Width="246" Height="30" Margin="11,0,0,0"  />
             <TextBlock Text="Confirm Password: " Width="123" Height="25"/>
-            <TextBox x:Name="txtConfPass"/>
+            <PasswordBox x:Name="confpass" Width="246" Height="30" Margin="19,0,0,0"  />
 
         </WrapPanel>
         <Button Content="LEST GO!" HorizontalAlignment="Left" Margin="97,293,0,0" Grid.Row="1" VerticalAlignment="Top" Width="258" Height="41" Background="#FF00B9FF" Click="Button_Click"/>

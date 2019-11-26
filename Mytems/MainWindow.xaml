@@ -25,11 +25,11 @@
             </WrapPanel>
             <WrapPanel>
                 <TextBlock Text="Username :" Width="131"/>
-                <TextBox x:Name="txtUsarname"/>
+                <TextBox x:Name="txtUsarname" Width="259"/>
             </WrapPanel>
             <WrapPanel Height="48" Margin="0,0,10,0">
                 <TextBlock Text="Password :" Width="131"/>
-                <TextBox Name="txtPassword"/>
+                <PasswordBox x:Name="passbd" Width="258" Height="30" Margin="11,0,0,0"  />
 
             </WrapPanel>
             <WrapPanel Height="72" RenderTransformOrigin="0.499,1.097" Margin="266,0,8,0" >
@@ -47,5 +47,7 @@
             <Button x:Name="BtnLogin" Content="Log In" Margin="0,40,50,40" Height="40" Click="BtnLogin_Click" FontSize="20" Background="#FF00B9FF" ToolTip="Start" HorizontalAlignment="Right" Width="333" Grid.IsSharedSizeScope="True"/>
             <Button x:Name="BtnRegister" Content="Register" Margin="0,-20,50,40" Height="40" Click="BtnRegister_Click" FontSize="20" Background="#FF00B9FF" ToolTip="Start" HorizontalAlignment="Right" Width="333" Grid.IsSharedSizeScope="True"/>
         </StackPanel>
+        <PasswordBox/>
+        <PasswordBox Width="100"/>
     </DockPanel>
 </Window>
