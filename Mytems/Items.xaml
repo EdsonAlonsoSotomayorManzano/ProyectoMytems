@@ -21,6 +21,7 @@
             <ComboBoxItem Content="Porfile"/>
             <ComboBoxItem Content="Setting"/>
             <ComboBoxItem Content="Shopping"/>
+            <ComboBoxItem Content="Log Out" Selected="ComboBoxItem_Selected"/>
         </ComboBox>
         <Button HorizontalAlignment="Left" Margin="705,54,0,0" VerticalAlignment="Top" Width="53" Height="22" Cursor="No" Background="#FF150101" BorderBrush="LightGray" RenderTransformOrigin="0.585,0.682">
             <Button.OpacityMask>
@@ -37,8 +38,9 @@
             <TextBlock x:Name="PriceOBJ" HorizontalAlignment="Left" Margin="236,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="164" Height="27"/>
             <Button HorizontalAlignment="Left" Height="27" Margin="429,0,0,0" VerticalAlignment="Top" Width="157" Content="BUY" Background="#36B6FF" Foreground="Black" x:Name="BtnBuyOBJ" Click="BtnBuyAWP_Click"/>
             <Image HorizontalAlignment="Left" Height="152" VerticalAlignment="Top" Width="214"  Stretch="Fill" Margin="20,-160,0,0"/>
-
+    
         </StackPanel>
+        <Button x:Name="btnHome"  HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="68" Height="57" Opacity="0" Click="btnHome_Click"/>
 
 
     </Grid>

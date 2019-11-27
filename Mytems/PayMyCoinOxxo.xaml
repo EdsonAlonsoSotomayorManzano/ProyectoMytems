@@ -1,0 +1,17 @@
+﻿<Window x:Class="Mytems.PayMyCoinOxxo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mytems"
+        mc:Ignorable="d"
+        Title="PayMyCoinOxxo" Height="629.534" Width="544.689" Background="#FFE2E2E2" WindowState="Normal" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <Grid>
+        <Image HorizontalAlignment="Left" Height="120" Margin="170,10,0,0" VerticalAlignment="Top" Width="223" Source="Images/Oxxo.png"/>
+        <TextBlock x:Name="txtPriceItem" HorizontalAlignment="Left" Margin="92,161,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="355" Height="65" FontWeight="Bold"/>
+        <Label Content="1.- Mention the employee that you want to pay for a &#xA;MyTems service." HorizontalAlignment="Left" Margin="92,231,0,0" VerticalAlignment="Top" Width="371" Height="55" FontFamily="Tahoma" FontSize="15" HorizontalContentAlignment="Center"/>
+        <Label Content="2.- 
+Dictate the code to the cashier and voila!" HorizontalAlignment="Left" Margin="92,291,0,0" VerticalAlignment="Top" Width="371" Height="55" FontFamily="Tahoma" FontSize="15" HorizontalContentAlignment="Center"/>
+        <Image HorizontalAlignment="Left" Height="40" Margin="92,369,0,0" VerticalAlignment="Top" Width="371" Source="Images/Cod.png"/>
+    </Grid>
+</Window>

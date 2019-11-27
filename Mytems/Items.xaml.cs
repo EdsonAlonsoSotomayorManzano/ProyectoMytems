@@ -44,5 +44,17 @@ namespace Mytems
         {
 
         }
+
+        private void btnHome_Click(object sender, RoutedEventArgs e)
+        {
+            Home Home = new Home();
+            this.Hide();
+            Home.Show();
+        }
+
+        private void ComboBoxItem_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -25,12 +25,12 @@
             </Button.OpacityMask>
         </Button>
         <Label Content="Mytems! the massive pixel market" HorizontalAlignment="Center" Height="24" Margin="550,19,10,0" VerticalAlignment="Top" Width="232" FontFamily="Bold"/>
-        <Image Margin="36,148,422,-303"  Stretch="Fill"/>
+        <Image x:Name="ImageItem" Margin="36,148,422,-303"  Stretch="Fill"/>
 
-        <TextBlock HorizontalAlignment="Left" Margin="431,148,0,-125" TextWrapping="Wrap" Text="KARAMBIT LIMITED EDITION DOPPLER" VerticalAlignment="Top" Height="58" Width="351" FontSize="20" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" Margin="428,274,0,-224" TextWrapping="Wrap" Text="PRECIO: $0.00 MX" VerticalAlignment="Top" Width="205" Height="31" FontWeight="Bold"/>
-        <Button HorizontalAlignment="Left" Height="36" Margin="431,326,0,-281" VerticalAlignment="Top" Width="177" Content="CONFIRM PURCHASE" Background="#36B6FF" Foreground="Black" x:Name="BtnBuyKnife" Click="BtnBuyKnife_Click" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" Margin="36,406,0,-375" TextWrapping="Wrap" Background="#36B6FF" VerticalAlignment="Top" Height="50" Width="334" FontSize="22" FontWeight="Bold" TextAlignment="Center" ><Run Text="            "/><Run Text="f"/><Run Text="eatures:                    "/></TextBlock>
+        <TextBlock x:Name="TxtNameItem" HorizontalAlignment="Left" Margin="431,148,0,-125" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="58" Width="351" FontSize="20" FontWeight="Bold"/>
+        <TextBlock x:Name="txtPriceItem" HorizontalAlignment="Left" Margin="428,274,0,-224" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="205" Height="31" FontWeight="Bold"/>
+        <Button HorizontalAlignment="Left" Height="44" Margin="436,326,0,-289" VerticalAlignment="Top" Width="177" Content="CONFIRM PURCHASE" Background="#36B6FF" Foreground="Black" x:Name="BtnConBuy" Click="BtnBuyKnife_Click" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="36,406,0,-375" TextWrapping="Wrap" Background="#36B6FF" VerticalAlignment="Top" Height="50" Width="334" FontSize="22" FontWeight="Bold" TextAlignment="Center" Text="            Features:                    " />
         <TextBox x:Name="txtfeatures" Background="#FFDDF4FF" HorizontalAlignment="Left" Height="154" Margin="36,462,0,-535" TextWrapping="Wrap" VerticalAlignment="Top" Width="334" FontSize="14" FontWeight="Bold" FontFamily="Tahoma"/>
     </Grid>
 </Window>

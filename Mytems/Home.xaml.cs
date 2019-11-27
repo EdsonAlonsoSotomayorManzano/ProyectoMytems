@@ -73,5 +73,36 @@ namespace Mytems
             coinswindows.Show();
             this.Close();
         }
+
+        private void btnHome_Click(object sender, RoutedEventArgs e)
+        {
+            Home Home = new Home();
+            this.Hide();
+            Home.Show();
+        }
+
+        private void btnShopCar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void cbAcc_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
+            
+        }
+
+        private void ComboBoxItem_Selected(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Are you sure you want to leave?", "Mytems",MessageBoxButton.YesNo,MessageBoxImage.Question);
+            if (result == MessageBoxResult.Yes)
+            {
+                this.Close();
+                MainWindow login = new MainWindow();
+                login.Show();
+                this.Close();
+            }
+           
+        }
     }
 }

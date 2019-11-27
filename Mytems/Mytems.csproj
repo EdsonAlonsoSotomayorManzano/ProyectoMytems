@@ -76,6 +76,9 @@
     <Compile Include="Coins.xaml.cs">
       <DependentUpon>Coins.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PayMyCoinOxxo.xaml.cs">
+      <DependentUpon>PayMyCoinOxxo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Register.xaml.cs">
       <DependentUpon>Register.xaml</DependentUpon>
     </Compile>
@@ -113,6 +116,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Chat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PayMyCoinOxxo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -201,6 +208,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\mycoinlogo4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Cod.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

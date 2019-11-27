@@ -40,8 +40,9 @@ namespace Mytems
 
         private void btnFPass_Click(object sender, RoutedEventArgs e)
         {
-            
-            
+            System.Diagnostics.Process.Start("http://mytems.com.mx/forgot-your-password-");
+
+
         }
 
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
@@ -80,7 +81,7 @@ namespace Mytems
                                 Home Home = new Home();
                                 this.Hide();
                                 Home.Show();
-                                MessageBox.Show("Welcome Pleyer :D");
+                                MessageBox.Show("Welcome Pleyer :D", "Mytems",MessageBoxButton.OK,MessageBoxImage.Asterisk);
                             }
                         }
                         else

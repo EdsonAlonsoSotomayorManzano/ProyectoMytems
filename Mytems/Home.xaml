@@ -18,14 +18,14 @@
             <Setter Property="Margin" Value="10"/>
         </Style>
     </Window.Resources>
-    <Grid Name="Grin1" Background="#36B6FF" AllowDrop="False" Height="81" VerticalAlignment="Top" HorizontalAlignment="Right" Width="805" Margin="0,0,-36,0">
+    <Grid Name="Grin1" Background="#36B6FF" AllowDrop="False" Height="81" VerticalAlignment="Top" HorizontalAlignment="Right" Width="775" Margin="0,0,-6,0">
         <Button x:Name="MYCOINS" Content="MyCoins" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Height="26" Margin="618,94,0,-39" VerticalAlignment="Top" Width="88" RenderTransformOrigin="0.689,0.293" Click="MYCOINS_Click" >
             <Button.Background>
                 <ImageBrush ImageSource="Images/mycoinlogo4.jpg"/>
             </Button.Background>
         </Button>
-        <Image Source="images/LOGO1 (1).png" Margin="-4,-4,701,0" Height="75" VerticalAlignment="Top" RenderTransformOrigin="0.518,-0.053"/>
-        <TextBox x:Name="txtSerch" Margin="96,0,307,37" Width="Auto" Height="34" VerticalAlignment="Bottom"/>
+        <Image Source="images/LOGO1 (1).png" Margin="10,-4,687,0" Height="85" VerticalAlignment="Top" RenderTransformOrigin="0.518,-0.053" />
+        <TextBox x:Name="txtSerch" Margin="96,0,0,37" Width="383" Height="34" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
         <Button Content="GO!" HorizontalAlignment="Left" Margin="477,0,0,37" VerticalAlignment="Bottom" Width="42" Height="34" RenderTransformOrigin="0.242,0.522" Background="White">
             <Button.RenderTransform>
                 <TransformGroup>
@@ -36,16 +36,17 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <ComboBox x:Name="cbFav1" HorizontalAlignment="Center" Margin="528,0,191,10" VerticalAlignment="Bottom" Width="86" RenderTransformOrigin="0.178,0.5" Height="27" BorderBrush="{x:Null}" Foreground="Black" OpacityMask="Black" SelectionChanged="ComboBox_SelectionChanged" Background="{x:Null}" SnapsToDevicePixels="True">
+        <ComboBox x:Name="cbFav1" HorizontalAlignment="Center" Margin="526,0,153,9" VerticalAlignment="Bottom" Width="86" RenderTransformOrigin="0.178,0.5" Height="27" BorderBrush="{x:Null}" Foreground="Black" OpacityMask="Black" SelectionChanged="ComboBox_SelectionChanged" Background="{x:Null}" SnapsToDevicePixels="True">
             <ComboBoxItem x:Name="cbFav" Content="Favorites" Selector.IsSelected="True"/>
         </ComboBox>
-        <ComboBox x:Name="cbAcc" HorizontalAlignment="Center" Margin="612,45,92,0" Width="88" Height="26" VerticalAlignment="Top">
+        <ComboBox x:Name="cbAcc" HorizontalAlignment="Center" Margin="612,45,65,0" Width="88" Height="26" VerticalAlignment="Top" RenderTransformOrigin="0.636,0.462" SelectionChanged="cbAcc_SelectionChanged">
             <ComboBoxItem Content="MyAccount" Selector.IsSelected="True" Margin="-286,0,286,0"/>
             <ComboBoxItem Content="Porfile"/>
             <ComboBoxItem Content="Setting"/>
             <ComboBoxItem Content="Shopping"/>
+            <ComboBoxItem Content="Log Out" Tag="Logout" Selected="ComboBoxItem_Selected"/>
         </ComboBox>
-        <Button x:Name="btnShopCar" HorizontalAlignment="Left" Margin="700,45,0,0" VerticalAlignment="Top" Width="53" Height="22" Cursor="No" Background="#FF150101" BorderBrush="LightGray">
+        <Button x:Name="btnShopCar" HorizontalAlignment="Left" Margin="700,45,0,0" VerticalAlignment="Top" Width="53" Height="22" Cursor="No" Background="#FF150101" BorderBrush="LightGray" Click="btnShopCar_Click">
             <Button.OpacityMask>
                 <ImageBrush ImageSource="Images/shoppingcart_80945.png" Stretch="Uniform"/>
             </Button.OpacityMask>
@@ -64,6 +65,7 @@
         <Button x:Name="btnwarcraft" Content="See More" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Margin="348,506,0,-458" Height="24" Background="#36B6FF" Click="btnwarcraft_Click"/>
         <Button x:Name="btnpokemon" Content="See More" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Margin="124,506,0,-458" Height="24" Background="#36B6FF" Click="btnpokemon_Click"/>
         <Button x:Name="btnFortnite" Content="See More" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Margin="566,506,0,-458" Height="33" Background="#36B6FF" Click="btnFortnite_Click"/>
+        <Button x:Name="btnHome"  HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="68" Height="57" Opacity="0" Click="btnHome_Click"/>
     </Grid>
 </Window>
 

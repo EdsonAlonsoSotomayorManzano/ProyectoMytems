@@ -43,7 +43,7 @@
                 </WrapPanel.RenderTransform>
                 <Button x:Name="btnFPass" Content="Forgot your Password?" FontSize="13" Width="151" Margin="10" Click="btnFPass_Click" Height="49" HorizontalContentAlignment="Center" Padding="1" ScrollViewer.CanContentScroll="True" Background="#FF00B9FF"/>
             </WrapPanel>
-            <RadioButton x:Name="RbtnKL" Content="Keep me logged in" FontSize="15" Height="27" Margin="33,0,230,0" RenderTransformOrigin="0.487,0.531" />
+            <RadioButton x:Name="RbtnKL" Content="Remember me" FontSize="15" Height="27" Margin="33,0,230,0" RenderTransformOrigin="0.487,0.531" />
             <Button x:Name="BtnLogin" Content="Log In" Margin="0,40,50,40" Height="40" Click="BtnLogin_Click" FontSize="20" Background="#FF00B9FF" ToolTip="Start" HorizontalAlignment="Right" Width="333" Grid.IsSharedSizeScope="True"/>
             <Button x:Name="BtnRegister" Content="Register" Margin="0,-20,50,40" Height="40" Click="BtnRegister_Click" FontSize="20" Background="#FF00B9FF" ToolTip="Start" HorizontalAlignment="Right" Width="333" Grid.IsSharedSizeScope="True"/>
         </StackPanel>
