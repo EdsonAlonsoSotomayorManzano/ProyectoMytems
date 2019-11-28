@@ -76,6 +76,9 @@
     <Compile Include="Coins.xaml.cs">
       <DependentUpon>Coins.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Confirm-trading.xaml.cs">
+      <DependentUpon>Confirm-trading.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PayMyCoinOxxo.xaml.cs">
       <DependentUpon>PayMyCoinOxxo.xaml</DependentUpon>
     </Compile>
@@ -86,6 +89,10 @@
       <DependentUpon>VentanaCompras.xaml</DependentUpon>
     </Compile>
     <Page Include="Coins.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Confirm-trading.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -211,6 +218,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Cod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\arrow.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\usser.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
