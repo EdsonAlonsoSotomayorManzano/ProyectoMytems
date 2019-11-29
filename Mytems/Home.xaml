@@ -55,7 +55,7 @@
         <Image HorizontalAlignment="Left" Height="119" Margin="78,142,0,-179" VerticalAlignment="Top" Width="203" Source="Images/header_586x192.jpg" Stretch="Fill"/>
         <Image HorizontalAlignment="Left" Height="119" Margin="300,142,0,-179" VerticalAlignment="Top" Width="198" Source="Images/p1_2348574_cdf2effa.jpg" Stretch="Fill"/>
         <Image HorizontalAlignment="Left" Height="119" Margin="521,142,0,-180" VerticalAlignment="Top" Width="200" Source="Images/450_1000 (1).jpg" Stretch="Fill"/>
-        <Button Content="See More" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Margin="124,286,0,-237" Height="24" Background="#36B6FF" Click="Button_Click"/>
+        <Button x:Name="btnCSGO" Content="See More" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Margin="124,286,0,-237" Height="24" Background="#36B6FF" Click="Button_Click"/>
         <Button x:Name="btnminecraft" Content="See More" HorizontalAlignment="Left" Height="24" Margin="348,286,0,-237" VerticalAlignment="Top" Width="111" Background="#36B6FF" Click="btnminecraft_Click"/>
         <Button x:Name="btnLol" Content="See More" HorizontalAlignment="Left" Height="24" Margin="566,286,0,-237" VerticalAlignment="Top" Width="111" Background="#36B6FF" Click="btnLol_Click"/>
         <Image HorizontalAlignment="Left" Height="119" Margin="78,362,0,-400" VerticalAlignment="Top" Width="203" Source="Images/poke crianza2.0.jpg" Stretch="Fill"/>

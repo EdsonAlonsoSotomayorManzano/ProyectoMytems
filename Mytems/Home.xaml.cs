@@ -13,12 +13,12 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
 namespace Mytems
-{
-    /// <summary>
+{    /// <summary>
     /// Lógica de interacción para Home.xaml
     /// </summary>
     public partial class Home : Window
     {
+        public static int selected = 0;
         Items ItemWindow = new Items();
         public Home()
         {
