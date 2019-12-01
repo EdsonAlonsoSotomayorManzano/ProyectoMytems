@@ -41,8 +41,6 @@ namespace Mytems
         private void btnFPass_Click(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Process.Start("http://mytems.com.mx/forgot-your-password-");
-
-
         }
 
         private void BtnLogin_Click(object sender, RoutedEventArgs e)

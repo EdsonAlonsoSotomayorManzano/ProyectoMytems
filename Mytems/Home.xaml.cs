@@ -18,8 +18,7 @@ namespace Mytems
     /// </summary>
     public partial class Home : Window
     {
-        public static int selected = 0;
-        Items ItemWindow = new Items();
+        public static int selected;
         public Home()
         {
             InitializeComponent();
@@ -33,36 +32,48 @@ namespace Mytems
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            selected = 1;
+            Items ItemWindow = new Items();
             ItemWindow.Show();
             this.Close();
         }
 
         private void btnminecraft_Click(object sender, RoutedEventArgs e)
         {
+            selected = 2;
+            Items ItemWindow = new Items();
             ItemWindow.Show();
             this.Close();
         }
 
         private void btnLol_Click(object sender, RoutedEventArgs e)
         {
+            selected = 3;
+            Items ItemWindow = new Items();
             ItemWindow.Show();
             this.Close();
         }
 
         private void btnpokemon_Click(object sender, RoutedEventArgs e)
         {
+            selected = 4;
+            Items ItemWindow = new Items();
             ItemWindow.Show();
             this.Close();
         }
 
         private void btnwarcraft_Click(object sender, RoutedEventArgs e)
         {
+            selected = 5;
+            Items ItemWindow = new Items();
             ItemWindow.Show();
             this.Close();
         }
 
         private void btnFortnite_Click(object sender, RoutedEventArgs e)
         {
+            selected = 6;
+            Items ItemWindow = new Items();
             ItemWindow.Show();
             this.Close();
         }
