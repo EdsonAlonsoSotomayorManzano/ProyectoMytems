@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Mytems"
         mc:Ignorable="d"
-        Title="Confirm Trading" Height="700" Width="800" Background="#FFBEC8C9" Closing="ConfirmTrading_Closing" x:Name="ConfirmTrading">
+        Title="Confirm Trading" Height="700" Width="800" Background="#FFBEC8C9" Closing="ConfirmTrading_Closing" x:Name="ConfirmTrading" WindowState="Normal" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
     <Window.Resources>
         <Style TargetType="TextBlock">
             <Setter Property="FontSize" Value="20"/>
@@ -29,6 +29,7 @@
             </Button.Background>
         </Button>
         <Image Source="images/LOGO1 (1).png" Margin="0,-4,114.459,0" Height="85" VerticalAlignment="Top" RenderTransformOrigin="0.518,-0.053" />
+        <Button x:Name="btnHome"  HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="68" Height="57" Opacity="0" Click="btnHome_Click"/>
         <TextBox x:Name="txtSerch" Margin="96,0,0,37" Width="383" Height="34" VerticalAlignment="Bottom" HorizontalAlignment="Left" TextChanged="TxtSerch_TextChanged_1" Grid.ColumnSpan="2"/>
         <Button Content="GO!" HorizontalAlignment="Left" Margin="261.541,0,0,37" VerticalAlignment="Bottom" Width="42" Height="34" RenderTransformOrigin="0.242,0.522" Background="White" Click="Button_Click" Grid.Column="1">
             <Button.RenderTransform>

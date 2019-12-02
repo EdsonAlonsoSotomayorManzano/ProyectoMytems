@@ -112,6 +112,7 @@ namespace Mytems
                         da.Fill(dt);
                         cmd.ExecuteNonQuery();
                         CreatingStackPanel(cmd);
+                       
                         break;
                     }
                 case 5:

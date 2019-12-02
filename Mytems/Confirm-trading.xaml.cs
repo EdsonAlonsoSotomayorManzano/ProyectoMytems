@@ -76,7 +76,15 @@ namespace Mytems
         private void ConfirmTrading_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             VentanaCompras compras = new VentanaCompras();
+            this.Hide();
             compras.Show();
+        }
+
+        private void btnHome_Click(object sender, RoutedEventArgs e)
+        {
+            Home Home = new Home();
+            this.Hide();
+            Home.Show();
         }
     }
 }

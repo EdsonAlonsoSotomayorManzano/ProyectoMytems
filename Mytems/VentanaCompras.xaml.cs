@@ -135,15 +135,23 @@ namespace Mytems
 
         private void BtnBuy_Click(object sender, RoutedEventArgs e)
         {
-            Confirm_trading confirmbuy = new Confirm_trading();
-            confirmbuy.Show();
+            Confirm_trading confirmbuy = new Confirm_trading();  
             this.Hide();
+            confirmbuy.Show();
         }
 
         private void Compras_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             Items items = new Items();
+            this.Hide();
             items.Show();
+        }
+
+        private void btnHome_Click(object sender, RoutedEventArgs e)
+        {
+            Home Home = new Home();
+            this.Hide();
+            Home.Show();
         }
     }
 }

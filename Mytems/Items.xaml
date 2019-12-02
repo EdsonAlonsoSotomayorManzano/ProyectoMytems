@@ -5,47 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Mytems"
         mc:Ignorable="d"
-        Title="Mytems" Background="#FFE2E2E2"  WindowStartupLocation="CenterScreen" WindowState="Maximized" x:Name="Itemss" Closing="Items_Closing">
+        Title="Mytems" Background="#FFE2E2E2"  WindowStartupLocation="CenterScreen" WindowState="Maximized" x:Name="Itemss" Closing="Items_Closing" Height="646.372" Width="856.487">
     <Grid VerticalAlignment="Top" Margin="0,0,0,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="107*"/>
             <RowDefinition Height="507*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="409*"/>
-            <ColumnDefinition Width="208*"/>
-            <ColumnDefinition Width="175*"/>
+            <ColumnDefinition Width="392*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="151*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock Background="#36B6FF" Grid.ColumnSpan="3" />
-        <Image HorizontalAlignment="Left" Height="79" VerticalAlignment="Top" Width="97" Source="Images/LOGO1 (1).png"/>
-        <TextBox x:Name="txtSerch" Margin="96,19,131,0" Width="Auto" Height="34" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-        <Button Content="GO!" HorizontalAlignment="Left" Margin="23,19,0,0" VerticalAlignment="Top" Width="42" Height="34" RenderTransformOrigin="0.242,0.522" Background="White" Grid.Column="1"/>
-        <ComboBox HorizontalAlignment="Center" Margin="91,54,31,0" VerticalAlignment="Top" Width="86" RenderTransformOrigin="0.178,0.5" Height="27" BorderBrush="{x:Null}" Foreground="Black" OpacityMask="Black" SelectionChanged="ComboBox_SelectionChanged" Background="{x:Null}" SnapsToDevicePixels="True" Grid.Column="1">
-            <ComboBoxItem Name="cbFav" Content="Favorites" Selector.IsSelected="True"/>
-        </ComboBox>
-        <ComboBox Name="cbAcc" HorizontalAlignment="Center" Margin="177,54,118,0" Width="88" Height="27" VerticalAlignment="Top" SelectionChanged="CbAcc_SelectionChanged" Grid.ColumnSpan="2" Grid.Column="1">
-            <ComboBoxItem Content="MyAccount" Selector.IsSelected="True" Margin="-286,0,286,0"/>
-            <ComboBoxItem Content="Porfile"/>
-            <ComboBoxItem Content="Setting"/>
-            <ComboBoxItem Content="Shopping"/>
-            <ComboBoxItem Content="Log Out" Selected="ComboBoxItem_Selected"/>
-        </ComboBox>
-        <Button HorizontalAlignment="Left" Margin="86,54,0,0" VerticalAlignment="Top" Width="53" Height="22" Cursor="No" Background="#FF150101" BorderBrush="LightGray" RenderTransformOrigin="0.585,0.682" Grid.Column="2">
-            <Button.OpacityMask>
-                <ImageBrush ImageSource="Images/shoppingcart_80945.png" Stretch="Uniform"/>
-            </Button.OpacityMask>
-        </Button>
-        <Label Content="Mytems! the massive pixel market" HorizontalAlignment="Center" Height="24" Margin="115,19,36,0" VerticalAlignment="Top" Width="232" FontFamily="Bold" Grid.ColumnSpan="2" Grid.Column="1"/>
-        <Image x:Name="ImageGame" HorizontalAlignment="Center" Height="150" Width="700" VerticalAlignment="Top"  Stretch="Fill" Margin="0,8,0,0" Grid.Row="1" Grid.ColumnSpan="3">
+        <TextBlock Background="#36B6FF" Grid.ColumnSpan="4" />
+        <Image HorizontalAlignment="Left" Height="79" VerticalAlignment="Top" Width="97" Source="Images/LOGO1 (1).png" Grid.ColumnSpan="2" Margin="387,-10,0,0"/>
+        <Label Content="Mytems! the massive pixel market" HorizontalAlignment="Center" Height="24" Margin="148,0,31,10" VerticalAlignment="Bottom" Width="232" FontFamily="Bold" Grid.ColumnSpan="3" Grid.Column="1"/>
+        <Image x:Name="ImageGame" HorizontalAlignment="Center" Height="150" Width="700" VerticalAlignment="Top"  Stretch="Fill" Margin="30,8,30,0" Grid.Row="1" Grid.ColumnSpan="4">
             <Image.OpacityMask>
                 <ImageBrush ImageSource="Images/Cod.png"/>
             </Image.OpacityMask>
         </Image>
-        <Image HorizontalAlignment="Left" Height="5" Margin="6,601,0,-99" VerticalAlignment="Top" Width="2" Grid.Row="1"/>
-        <ScrollViewer x:Name="svItems" HorizontalAlignment="Center" CanContentScroll="True" PanningMode="VerticalOnly" SnapsToDevicePixels="True" Margin="0,150,0,0" VerticalAlignment="Stretch" Width="1920" VerticalScrollBarVisibility="Visible" Grid.Row="1" Grid.ColumnSpan="3">
+        <Image HorizontalAlignment="Left" Height="5" Margin="6,601,0,-190" VerticalAlignment="Top" Width="2" Grid.Row="1"/>
+        <ScrollViewer x:Name="svItems" HorizontalAlignment="Center" CanContentScroll="True" PanningMode="VerticalOnly" SnapsToDevicePixels="True" Margin="-580,150,-580,0" VerticalAlignment="Stretch" Width="1920" VerticalScrollBarVisibility="Visible" Grid.Row="1" Grid.ColumnSpan="4">
             <StackPanel x:Name="spitem" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="1600" Grid.ColumnSpan="3" Orientation="Vertical" ForceCursor="False" SnapsToDevicePixels="True" OverridesDefaultStyle="True" CanVerticallyScroll="True"/>
         </ScrollViewer>
-        <Button x:Name="btnHome"  HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="68" Height="57" Opacity="0" Click="btnHome_Click"/>
+        <Button x:Name="btnHome"  HorizontalAlignment="Left" Margin="400,10,0,0" VerticalAlignment="Top" Width="68" Height="57" Opacity="0" Click="btnHome_Click" Grid.ColumnSpan="2"/>
 
 
     </Grid>

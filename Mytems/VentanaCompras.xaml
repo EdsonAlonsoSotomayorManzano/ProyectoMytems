@@ -8,6 +8,7 @@
         Title="VentanaCompras" Height="700" Width="800" Background="#FFF0F0F0" WindowState="Normal"  WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" x:Name="Compras" Closing="Compras_Closing">
     <Grid Height="81" VerticalAlignment="Top" Margin="0,0,0,0" Background="#36B6FF">
         <Image HorizontalAlignment="Left" Height="79" VerticalAlignment="Top" Width="97" Source="Images/LOGO1 (1).png"/>
+        <Button x:Name="btnHome"  HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="68" Height="57" Opacity="0" Click="btnHome_Click"/>
         <TextBox x:Name="txtSerch" Margin="96,19,307,0" Width="Auto" Height="34" VerticalAlignment="Top"/>
         <Button Content="GO!" HorizontalAlignment="Left" Margin="483,19,0,0" VerticalAlignment="Top" Width="42" Height="34" RenderTransformOrigin="0.242,0.522" Background="White" Click="Button_Click"/>
         <ComboBox HorizontalAlignment="Center" Margin="526,54,180,0" VerticalAlignment="Top" Width="86" RenderTransformOrigin="0.178,0.5" Height="27" BorderBrush="{x:Null}" Foreground="Black" OpacityMask="Black" SelectionChanged="ComboBox_SelectionChanged" Background="{x:Null}" SnapsToDevicePixels="True">
