@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Mytems"
         mc:Ignorable="d"
-        Title="Confirm Trading" Height="700" Width="800" Background="#FFBEC8C9">
+        Title="Confirm Trading" Height="700" Width="800" Background="#FFBEC8C9" Closing="ConfirmTrading_Closing" x:Name="ConfirmTrading">
     <Window.Resources>
         <Style TargetType="TextBlock">
             <Setter Property="FontSize" Value="20"/>
@@ -19,14 +19,18 @@
         </Style>
     </Window.Resources>
     <Grid Name="Grin1" Background="#36B6FF" AllowDrop="False" Height="81" VerticalAlignment="Top" HorizontalAlignment="Right" Width="798" Margin="0,0,-6,0">
-        <Button x:Name="MYCOINS" Content="MyCoins" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Height="26" Margin="618,94,0,-39" VerticalAlignment="Top" Width="88" RenderTransformOrigin="0.689,0.293" Click="MYCOINS_Click" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="215*"/>
+            <ColumnDefinition Width="583*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="MYCOINS" Content="MyCoins" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Height="26" Margin="402.541,94,0,-39" VerticalAlignment="Top" Width="88" RenderTransformOrigin="0.689,0.293" Click="MYCOINS_Click" Grid.Column="1" >
             <Button.Background>
                 <ImageBrush ImageSource="Images/mycoinlogo4.jpg"/>
             </Button.Background>
         </Button>
-        <Image Source="images/LOGO1 (1).png" Margin="0,-4,697,0" Height="85" VerticalAlignment="Top" RenderTransformOrigin="0.518,-0.053" />
-        <TextBox x:Name="txtSerch" Margin="96,0,0,37" Width="383" Height="34" VerticalAlignment="Bottom" HorizontalAlignment="Left" TextChanged="TxtSerch_TextChanged_1"/>
-        <Button Content="GO!" HorizontalAlignment="Left" Margin="477,0,0,37" VerticalAlignment="Bottom" Width="42" Height="34" RenderTransformOrigin="0.242,0.522" Background="White" Click="Button_Click">
+        <Image Source="images/LOGO1 (1).png" Margin="0,-4,114.459,0" Height="85" VerticalAlignment="Top" RenderTransformOrigin="0.518,-0.053" />
+        <TextBox x:Name="txtSerch" Margin="96,0,0,37" Width="383" Height="34" VerticalAlignment="Bottom" HorizontalAlignment="Left" TextChanged="TxtSerch_TextChanged_1" Grid.ColumnSpan="2"/>
+        <Button Content="GO!" HorizontalAlignment="Left" Margin="261.541,0,0,37" VerticalAlignment="Bottom" Width="42" Height="34" RenderTransformOrigin="0.242,0.522" Background="White" Click="Button_Click" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -36,40 +40,40 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <ComboBox x:Name="cbFav1" HorizontalAlignment="Center" Margin="526,0,153,9" VerticalAlignment="Bottom" Width="86" RenderTransformOrigin="0.178,0.5" Height="27" BorderBrush="{x:Null}" Foreground="Black" OpacityMask="Black" SelectionChanged="ComboBox_SelectionChanged" Background="{x:Null}" SnapsToDevicePixels="True">
+        <ComboBox x:Name="cbFav1" HorizontalAlignment="Center" Margin="326.541,0,170,9" VerticalAlignment="Bottom" Width="86" RenderTransformOrigin="0.178,0.5" Height="27" BorderBrush="{x:Null}" Foreground="Black" OpacityMask="Black" SelectionChanged="ComboBox_SelectionChanged" Background="{x:Null}" SnapsToDevicePixels="True" Grid.Column="1">
             <ComboBoxItem x:Name="cbFav" Content="Favorites" Selector.IsSelected="True"/>
         </ComboBox>
-        <ComboBox x:Name="cbAcc" HorizontalAlignment="Center" Margin="617,45,70,10" Width="88" RenderTransformOrigin="0.5,0.5" SelectionChanged="CbAcc_SelectionChanged">
+        <ComboBox x:Name="cbAcc" HorizontalAlignment="Center" Margin="412.541,45,82,10" Width="88" RenderTransformOrigin="0.5,0.5" SelectionChanged="CbAcc_SelectionChanged" Grid.Column="1">
             <ComboBoxItem Content="MyAccount" Selector.IsSelected="True" Margin="-286,0,286,0"/>
             <ComboBoxItem Content="Porfile"/>
             <ComboBoxItem Content="Setting"/>
             <ComboBoxItem Content="Shopping"/>
             <ComboBoxItem Content="Log Out"/>
         </ComboBox>
-        <Button x:Name="btnShopCar" HorizontalAlignment="Left" Margin="700,45,0,0" VerticalAlignment="Top" Width="53" Height="22" Cursor="No" Background="#FF150101" BorderBrush="LightGray" Click="btnShopCar_Click">
+        <Button x:Name="btnShopCar" HorizontalAlignment="Left" Margin="484.541,45,0,0" VerticalAlignment="Top" Width="53" Height="22" Cursor="No" Background="#FF150101" BorderBrush="LightGray" Click="btnShopCar_Click" Grid.Column="1">
             <Button.OpacityMask>
                 <ImageBrush ImageSource="Images/shoppingcart_80945.png" Stretch="Uniform"/>
             </Button.OpacityMask>
         </Button>
-        <Label Content="Mytems! the massive pixel market" HorizontalAlignment="Center" Height="24" Margin="521,10,0,0" VerticalAlignment="Top" Width="232" FontFamily="Bold"/>
+        <Label Content="Mytems! the massive pixel market" HorizontalAlignment="Center" Height="24" Margin="328.541,10,22,0" VerticalAlignment="Top" Width="232" FontFamily="Bold" Grid.Column="1"/>
 
-        <Label Content="Buyer Name:" HorizontalAlignment="Center" Height="60" Margin="42,282,539,-261" VerticalAlignment="Top" Width="194" FontFamily="Bold" FontSize="20"/>
-        <Label Content="Seller Name:" HorizontalAlignment="Center" Height="63" Margin="574,282,29,-264" VerticalAlignment="Top" Width="172" FontFamily="Bold" FontSize="20"/>
+        <Label Content="Buyer Name:" HorizontalAlignment="Center" Height="60" Margin="54,282,550,-261" VerticalAlignment="Top" Width="194" FontFamily="Bold" FontSize="20" Grid.ColumnSpan="2"/>
+        <Label Content="Seller Name:" HorizontalAlignment="Center" Height="63" Margin="370.541,282,40,-264" VerticalAlignment="Top" Width="172" FontFamily="Bold" FontSize="20" Grid.Column="1"/>
 
         <Image  HorizontalAlignment="Left" Height="105" Margin="73,140,0,-164" VerticalAlignment="Top" Width="133" Source="Images/Usser.jpg" Stretch="Fill" />
-        <Image  HorizontalAlignment="Left" Height="105" Margin="297,140,0,-164" VerticalAlignment="Top" Width="188"  Stretch="Fill" />
-        <Image  HorizontalAlignment="Left" Height="105" Margin="583,140,0,-164" VerticalAlignment="Top" Width="117" Source="Images/Usser.jpg" Stretch="Fill"/>
+        <Image  HorizontalAlignment="Left" Height="105" Margin="81.541,140,0,-164" VerticalAlignment="Top" Width="188"  Stretch="Fill" Grid.Column="1" />
+        <Image  HorizontalAlignment="Left" Height="105" Margin="367.541,140,0,-164" VerticalAlignment="Top" Width="117" Source="Images/Usser.jpg" Stretch="Fill" Grid.Column="1"/>
 
-        <WrapPanel Margin="250,326,250,-549" Orientation="Vertical">
-            <TextBlock HorizontalAlignment="Center" Margin="10,10,10,0" TextWrapping="Wrap" Text="(Product name)"  VerticalAlignment="Top"  FontSize="20" FontWeight="Bold"/>
-            <TextBlock HorizontalAlignment="Center" Margin="10,10,10,0" TextWrapping="Wrap" Text="(product characteristics)"  VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Height="163" />
+        <WrapPanel Margin="34.541,326,250,-549" Orientation="Vertical" Grid.Column="1">
+            <TextBlock HorizontalAlignment="Center" Margin="10,10,10,0" TextWrapping="Wrap" Text="(Product name)"  VerticalAlignment="Top"  FontSize="20" FontWeight="Bold" x:Name="txtNameObj"/>
+            <TextBlock HorizontalAlignment="Center" Margin="10,10,10,0" TextWrapping="Wrap" Text="(product characteristics)"  VerticalAlignment="Top" FontSize="17" Height="163" x:Name="txtDescObj" />
             <TextBlock HorizontalAlignment="Center" Margin="0,0,0,0" TextWrapping="Wrap" Text="(chronometer)"  VerticalAlignment="Center" FontSize="20" FontWeight="Bold" Height="49" Width="139"/>
         </WrapPanel>
 
-        <Button HorizontalAlignment="Left" Height="36" Margin="73,509,0,-464" VerticalAlignment="Top" Width="133" Content="CONFIRM" Background="#36B6FF" Foreground="Black" x:Name="BtnBuyKnife" Click="BtnBuyKnife_Click" FontWeight="Bold"/>
-        <Button HorizontalAlignment="Left" Height="36" Margin="583,509,0,-464" VerticalAlignment="Top" Width="132" Content="CONFIRM" Background="#36B6FF" Foreground="Black" x:Name="BtnBuy" Click="BtnBuyKnife_Click" FontWeight="Bold"/>
-        <TextBox HorizontalAlignment="Left" Height="50" Margin="42,354,0,-323" TextWrapping="Wrap" Text="(Buyer NickName)" VerticalAlignment="Top" Width="194" FontSize="16" Background="Transparent"/>
-        <TextBox HorizontalAlignment="Left" Height="50" Margin="574,354,0,-323" TextWrapping="Wrap" Text="(Seller NickName)" VerticalAlignment="Top" Width="172" FontSize="16" Background="Transparent"/>
+        <Button HorizontalAlignment="Left" Height="36" Margin="73,509,0,-464" VerticalAlignment="Top" Width="133" Content="CONFIRM" Background="#36B6FF" Foreground="Black" x:Name="BtnConfirmBuy" Click="BtnConfirmBuyer_Click" FontWeight="Bold"/>
+        <Button HorizontalAlignment="Left" Height="36" Margin="367.541,509,0,-464" VerticalAlignment="Top" Width="132" Content="CONFIRM" Background="#36B6FF" Foreground="Black" x:Name="BtnConfirmSell" Click="BtnConfirmSeller_Click" FontWeight="Bold" Grid.Column="1"/>
+        <TextBox HorizontalAlignment="Left" Height="50" Margin="42,354,0,-323" TextWrapping="Wrap" Text="(Buyer NickName)" VerticalAlignment="Top" Width="194" FontSize="16" Background="Transparent" Grid.ColumnSpan="2"/>
+        <TextBox HorizontalAlignment="Left" Height="50" Margin="358.541,354,0,-323" TextWrapping="Wrap" Text="(Seller NickName)" VerticalAlignment="Top" Width="172" FontSize="16" Background="Transparent" Grid.Column="1"/>
 
 
     </Grid>

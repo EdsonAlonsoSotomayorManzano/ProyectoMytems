@@ -25,8 +25,7 @@ namespace Mytems
     /// </summary>
     public partial class Items : Window
     {
-        public static string id;
-
+        public static string NameBtn;
 
         OleDbConnection con;
         DataTable dt;
@@ -60,6 +59,7 @@ namespace Mytems
                         da = new OleDbDataAdapter(cmd.CommandText, con.ConnectionString);
                         dt = new DataTable();
                         da.Fill(dt);
+                        cmd.ExecuteNonQuery();
                         CreatingStackPanel(cmd);
                         break;
                     }
@@ -76,6 +76,7 @@ namespace Mytems
                         da = new OleDbDataAdapter(cmd.CommandText, con.ConnectionString);
                         dt = new DataTable();
                         da.Fill(dt);
+                        cmd.ExecuteNonQuery();
                         CreatingStackPanel(cmd);
                         break;
                     }
@@ -92,6 +93,7 @@ namespace Mytems
                         da = new OleDbDataAdapter(cmd.CommandText, con.ConnectionString);
                         dt = new DataTable();
                         da.Fill(dt);
+                        cmd.ExecuteNonQuery();
                         CreatingStackPanel(cmd);
                         break;
                     }
@@ -108,6 +110,7 @@ namespace Mytems
                         da = new OleDbDataAdapter(cmd.CommandText, con.ConnectionString);
                         dt = new DataTable();
                         da.Fill(dt);
+                        cmd.ExecuteNonQuery();
                         CreatingStackPanel(cmd);
                         break;
                     }
@@ -124,6 +127,7 @@ namespace Mytems
                         da = new OleDbDataAdapter(cmd.CommandText, con.ConnectionString);
                         dt = new DataTable();
                         da.Fill(dt);
+                        cmd.ExecuteNonQuery();
                         CreatingStackPanel(cmd);
                         break;
                     }
@@ -140,6 +144,7 @@ namespace Mytems
                         da = new OleDbDataAdapter(cmd.CommandText, con.ConnectionString);
                         dt = new DataTable();
                         da.Fill(dt);
+                        cmd.ExecuteNonQuery();
                         CreatingStackPanel(cmd);
                         break;
                     }
@@ -160,6 +165,14 @@ namespace Mytems
                        Name = "stackpanel" + i.ToString()
                     };
                     spitem.Children.Add(stack);
+
+                    //Image imageObj = new Image();
+                    //imageObj.Name = "imageObj" + i.ToString();
+                    //imageObj.Height = 100;
+                    //imageObj.Width = 200;
+//
+                    //stack.Children.Add(imageObj);
+
                     stack.Children.Add(new TextBlock
                     {
                         Name = "TitleObj" + i.ToString(),
@@ -235,12 +248,17 @@ namespace Mytems
         void button_click(object sender, RoutedEventArgs e)
         {
             Button btn = sender as Button;
-            MessageBox.Show(btn.Name + " clicked");
+
+            string ReplaceName = btn.Name;
+            NameBtn = ReplaceName.Replace("btn", "");
+            VentanaCompras buyit = new VentanaCompras();
+            buyit.Show();
+            this.Hide();
         }
 
         private static BitmapImage BytesToImage(byte[] bytes)
         {
-            var bm = new BitmapImage();
+            BitmapImage bm = new BitmapImage();
             using (MemoryStream stream = new MemoryStream(bytes))
             {
                 stream.Position = 0;
@@ -284,6 +302,11 @@ namespace Mytems
         private void ComboBoxItem_Selected(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void Items_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            
         }
     }
 }

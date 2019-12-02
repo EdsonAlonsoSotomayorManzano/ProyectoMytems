@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Mytems"
         mc:Ignorable="d"
-        Title="Mytems" Background="#FFE2E2E2"  WindowStartupLocation="CenterScreen" WindowState="Maximized" >
+        Title="Mytems" Background="#FFE2E2E2"  WindowStartupLocation="CenterScreen" WindowState="Maximized" x:Name="Itemss" Closing="Items_Closing">
     <Grid VerticalAlignment="Top" Margin="0,0,0,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="107*"/>

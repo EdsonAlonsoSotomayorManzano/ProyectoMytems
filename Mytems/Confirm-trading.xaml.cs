@@ -19,9 +19,14 @@ namespace Mytems
     /// </summary>
     public partial class Confirm_trading : Window
     {
+        public static int buyer = 0;
+        public static int seller = 0;
         public Confirm_trading()
         {
             InitializeComponent();
+            VentanaCompras ventana = new VentanaCompras();
+            txtNameObj.Text = ventana.TxtNameItem.Text;
+            txtDescObj.Text = ventana.txtDescItem.Text;
         }
 
         private void TxtSerch_TextChanged_1(object sender, TextChangedEventArgs e)
@@ -49,14 +54,29 @@ namespace Mytems
 
         }
 
-        private void BtnBuyKnife_Click(object sender, RoutedEventArgs e)
+        private void MYCOINS_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void MYCOINS_Click(object sender, RoutedEventArgs e)
+        private void BtnConfirmBuyer_Click(object sender, RoutedEventArgs e)
         {
+            buyer = 1;
+            if (buyer == 1 && seller == 1)
+                MessageBox.Show("Successful purchase");
+        }
 
+        private void BtnConfirmSeller_Click(object sender, RoutedEventArgs e)
+        {
+            seller = 1;
+            if (buyer == 1 && seller == 1)
+                MessageBox.Show("Successful purchase");
+        }
+
+        private void ConfirmTrading_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            VentanaCompras compras = new VentanaCompras();
+            compras.Show();
         }
     }
 }

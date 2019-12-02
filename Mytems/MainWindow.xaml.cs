@@ -41,6 +41,7 @@ namespace Mytems
         private void btnFPass_Click(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Process.Start("http://mytems.com.mx/forgot-your-password-");
+            con.Close();
         }
 
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
@@ -68,6 +69,7 @@ namespace Mytems
                         OleDbDataAdapter da = new OleDbDataAdapter(cmd.CommandText, con.ConnectionString);
                         dt = new DataTable();
                         da.Fill(dt);
+                        cmd.ExecuteNonQuery();
                         if (dt.Rows.Count>0)
                         {
                             if (passbd.Password != dt.Rows[0]["Pass"].ToString().Trim())
@@ -80,6 +82,7 @@ namespace Mytems
                                 this.Hide();
                                 Home.Show();
                                 MessageBox.Show("Welcome Pleyer :D", "Mytems",MessageBoxButton.OK,MessageBoxImage.Asterisk);
+                                con.Close();
                             }
                         }
                         else
@@ -94,6 +97,7 @@ namespace Mytems
                 }
 
             }
+            con.Close();
         }
         private void BtnRegister_Click(object sender, RoutedEventArgs e)
         {
