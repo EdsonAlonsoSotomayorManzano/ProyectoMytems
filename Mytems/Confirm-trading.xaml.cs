@@ -63,14 +63,27 @@ namespace Mytems
         {
             buyer = 1;
             if (buyer == 1 && seller == 1)
+            {
                 MessageBox.Show("Successful purchase");
+                Home Home = new Home();
+                this.Hide();
+                Home.Show();
+
+            }
         }
 
-        private void BtnConfirmSeller_Click(object sender, RoutedEventArgs e)
+            private void BtnConfirmSeller_Click(object sender, RoutedEventArgs e)
         {
             seller = 1;
             if (buyer == 1 && seller == 1)
+            {
                 MessageBox.Show("Successful purchase");
+                Home Home = new Home();
+                this.Hide();
+                Home.Show();
+            }
+                
+                
         }
 
         private void ConfirmTrading_Closing(object sender, System.ComponentModel.CancelEventArgs e)

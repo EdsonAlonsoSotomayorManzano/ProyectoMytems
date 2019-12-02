@@ -7,25 +7,9 @@
         mc:Ignorable="d"
         Title="VentanaCompras" Height="700" Width="800" Background="#FFF0F0F0" WindowState="Normal"  WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" x:Name="Compras" Closing="Compras_Closing">
     <Grid Height="81" VerticalAlignment="Top" Margin="0,0,0,0" Background="#36B6FF">
-        <Image HorizontalAlignment="Left" Height="79" VerticalAlignment="Top" Width="97" Source="Images/LOGO1 (1).png"/>
-        <Button x:Name="btnHome"  HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="68" Height="57" Opacity="0" Click="btnHome_Click"/>
-        <TextBox x:Name="txtSerch" Margin="96,19,307,0" Width="Auto" Height="34" VerticalAlignment="Top"/>
-        <Button Content="GO!" HorizontalAlignment="Left" Margin="483,19,0,0" VerticalAlignment="Top" Width="42" Height="34" RenderTransformOrigin="0.242,0.522" Background="White" Click="Button_Click"/>
-        <ComboBox HorizontalAlignment="Center" Margin="526,54,180,0" VerticalAlignment="Top" Width="86" RenderTransformOrigin="0.178,0.5" Height="27" BorderBrush="{x:Null}" Foreground="Black" OpacityMask="Black" SelectionChanged="ComboBox_SelectionChanged" Background="{x:Null}" SnapsToDevicePixels="True">
-            <ComboBoxItem Name="cbFav" Content="Favorites" Selector.IsSelected="True"/>
-        </ComboBox>
-        <ComboBox Name="cbAcc" HorizontalAlignment="Center" Margin="612,54,92,0" Width="88" SelectionChanged="CbAcc_SelectionChanged">
-            <ComboBoxItem Content="MyAccount" Selector.IsSelected="True" Margin="-286,0,286,0"/>
-            <ComboBoxItem Content="Porfile"/>
-            <ComboBoxItem Content="Setting"/>
-            <ComboBoxItem Content="Shopping"/>
-        </ComboBox>
-        <Button HorizontalAlignment="Left" Name="btncarro" Margin="705,54,0,5" Width="53" Cursor="No" Background="#FF150101" BorderBrush="LightGray" RenderTransformOrigin="0.5,0.5" Click="Button_Click_1">
-            <Button.OpacityMask>
-                <ImageBrush ImageSource="Images/shoppingcart_80945.png" Stretch="Uniform"/>
-            </Button.OpacityMask>
-        </Button>
-        <Label Content="Mytems! the massive pixel market" HorizontalAlignment="Center" Height="24" Margin="550,19,10,0" VerticalAlignment="Top" Width="232" FontFamily="Bold"/>
+        <Image HorizontalAlignment="Left" Height="79" VerticalAlignment="Top" Width="97" Source="Images/LOGO1 (1).png" Margin="372,0,0,0"/>
+        <Button x:Name="btnHome"  HorizontalAlignment="Left" Margin="372,10,0,0" VerticalAlignment="Top" Width="68" Height="57" Opacity="0" Click="btnHome_Click"/>
+        <Label Content="Mytems! the massive pixel market" HorizontalAlignment="Center" Height="24" Margin="550,43,12,0" VerticalAlignment="Top" Width="232" FontFamily="Bold"/>
         <Image x:Name="ImageItem" Margin="36,148,422,-303"  Stretch="Fill"/>
 
         <TextBlock x:Name="TxtNameItem" HorizontalAlignment="Left" Margin="431,148,0,-125" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="58" Width="351" FontSize="20" FontWeight="Bold"/>

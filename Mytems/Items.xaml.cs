@@ -23,6 +23,7 @@ namespace Mytems
     /// <summary>
     /// Lógica de interacción para CSGO.xaml
     /// </summary>
+    
     public partial class Items : Window
     {
         public static string NameBtn;
@@ -215,6 +216,7 @@ namespace Mytems
                         Width = 1350,
                         FontSize = 12
                     });
+                             
 
                     Button btnBuy = new Button();
                     btnBuy.Name = "btn" + i.ToString();
@@ -255,22 +257,6 @@ namespace Mytems
             VentanaCompras buyit = new VentanaCompras();
             buyit.Show();
             this.Hide();
-        }
-
-        private static BitmapImage BytesToImage(byte[] bytes)
-        {
-            BitmapImage bm = new BitmapImage();
-            using (MemoryStream stream = new MemoryStream(bytes))
-            {
-                stream.Position = 0;
-                bm.BeginInit();
-                bm.CreateOptions = BitmapCreateOptions.PreservePixelFormat;
-                bm.CacheOption = BitmapCacheOption.OnLoad;
-                bm.UriSource = null;
-                bm.StreamSource = stream;
-                bm.EndInit();
-            }
-            return bm;
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)

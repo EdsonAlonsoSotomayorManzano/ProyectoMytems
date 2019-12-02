@@ -23,40 +23,9 @@
             <ColumnDefinition Width="215*"/>
             <ColumnDefinition Width="583*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="MYCOINS" Content="MyCoins" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Height="26" Margin="402.541,94,0,-39" VerticalAlignment="Top" Width="88" RenderTransformOrigin="0.689,0.293" Click="MYCOINS_Click" Grid.Column="1" >
-            <Button.Background>
-                <ImageBrush ImageSource="Images/mycoinlogo4.jpg"/>
-            </Button.Background>
-        </Button>
-        <Image Source="images/LOGO1 (1).png" Margin="0,-4,114.459,0" Height="85" VerticalAlignment="Top" RenderTransformOrigin="0.518,-0.053" />
-        <Button x:Name="btnHome"  HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="68" Height="57" Opacity="0" Click="btnHome_Click"/>
-        <TextBox x:Name="txtSerch" Margin="96,0,0,37" Width="383" Height="34" VerticalAlignment="Bottom" HorizontalAlignment="Left" TextChanged="TxtSerch_TextChanged_1" Grid.ColumnSpan="2"/>
-        <Button Content="GO!" HorizontalAlignment="Left" Margin="261.541,0,0,37" VerticalAlignment="Bottom" Width="42" Height="34" RenderTransformOrigin="0.242,0.522" Background="White" Click="Button_Click" Grid.Column="1">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.426"/>
-                    <TranslateTransform X="-0.004" Y="-0.056"/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-        <ComboBox x:Name="cbFav1" HorizontalAlignment="Center" Margin="326.541,0,170,9" VerticalAlignment="Bottom" Width="86" RenderTransformOrigin="0.178,0.5" Height="27" BorderBrush="{x:Null}" Foreground="Black" OpacityMask="Black" SelectionChanged="ComboBox_SelectionChanged" Background="{x:Null}" SnapsToDevicePixels="True" Grid.Column="1">
-            <ComboBoxItem x:Name="cbFav" Content="Favorites" Selector.IsSelected="True"/>
-        </ComboBox>
-        <ComboBox x:Name="cbAcc" HorizontalAlignment="Center" Margin="412.541,45,82,10" Width="88" RenderTransformOrigin="0.5,0.5" SelectionChanged="CbAcc_SelectionChanged" Grid.Column="1">
-            <ComboBoxItem Content="MyAccount" Selector.IsSelected="True" Margin="-286,0,286,0"/>
-            <ComboBoxItem Content="Porfile"/>
-            <ComboBoxItem Content="Setting"/>
-            <ComboBoxItem Content="Shopping"/>
-            <ComboBoxItem Content="Log Out"/>
-        </ComboBox>
-        <Button x:Name="btnShopCar" HorizontalAlignment="Left" Margin="484.541,45,0,0" VerticalAlignment="Top" Width="53" Height="22" Cursor="No" Background="#FF150101" BorderBrush="LightGray" Click="btnShopCar_Click" Grid.Column="1">
-            <Button.OpacityMask>
-                <ImageBrush ImageSource="Images/shoppingcart_80945.png" Stretch="Uniform"/>
-            </Button.OpacityMask>
-        </Button>
-        <Label Content="Mytems! the massive pixel market" HorizontalAlignment="Center" Height="24" Margin="328.541,10,22,0" VerticalAlignment="Top" Width="232" FontFamily="Bold" Grid.Column="1"/>
+        <Image Source="images/LOGO1 (1).png" Margin="107,-4,0,0" RenderTransformOrigin="0.518,-0.053" Grid.Column="1" HorizontalAlignment="Left" Width="101" Height="85" VerticalAlignment="Top" />
+        <Button x:Name="btnHome"  HorizontalAlignment="Left" Margin="125,10,0,0" VerticalAlignment="Top" Width="68" Height="57" Opacity="0" Click="btnHome_Click" Grid.Column="1"/>
+        <Label Content="Mytems! the massive pixel market" HorizontalAlignment="Center" Height="24" Margin="311,30,40,0" VerticalAlignment="Top" Width="232" FontFamily="Bold" Grid.Column="1"/>
 
         <Label Content="Buyer Name:" HorizontalAlignment="Center" Height="60" Margin="54,282,550,-261" VerticalAlignment="Top" Width="194" FontFamily="Bold" FontSize="20" Grid.ColumnSpan="2"/>
         <Label Content="Seller Name:" HorizontalAlignment="Center" Height="63" Margin="370.541,282,40,-264" VerticalAlignment="Top" Width="172" FontFamily="Bold" FontSize="20" Grid.Column="1"/>
