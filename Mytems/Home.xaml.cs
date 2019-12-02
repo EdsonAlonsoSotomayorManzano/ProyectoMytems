@@ -87,9 +87,7 @@ namespace Mytems
 
         private void btnHome_Click(object sender, RoutedEventArgs e)
         {
-            Home Home = new Home();
-            this.Hide();
-            Home.Show();
+
         }
 
         private void btnShopCar_Click(object sender, RoutedEventArgs e)

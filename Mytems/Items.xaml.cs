@@ -25,6 +25,9 @@ namespace Mytems
     /// </summary>
     public partial class Items : Window
     {
+        public static string id;
+
+
         OleDbConnection con;
         DataTable dt;
         OleDbDataAdapter da;
@@ -47,6 +50,12 @@ namespace Mytems
             {
                 case 1:
                     {
+                        BitmapImage bi3 = new BitmapImage();
+                        bi3.BeginInit();
+                        bi3.UriSource = new Uri("Images/header_586x192.jpg", UriKind.Relative);
+                        bi3.EndInit();
+                        ImageGame.Stretch = Stretch.Fill;
+                        ImageGame.Source = bi3;
                         cmd.CommandText = "Select * from CSGO";
                         da = new OleDbDataAdapter(cmd.CommandText, con.ConnectionString);
                         dt = new DataTable();
@@ -56,6 +65,13 @@ namespace Mytems
                     }
                 case 2:
                     {
+                        ImageGame.Width = 400;
+                        BitmapImage bi3 = new BitmapImage();
+                        bi3.BeginInit();
+                        bi3.UriSource = new Uri("Images/p1_2348574_cdf2effa.jpg", UriKind.Relative);
+                        bi3.EndInit();
+                        ImageGame.Stretch = Stretch.Fill;
+                        ImageGame.Source = bi3;
                         cmd.CommandText = "Select * from Minecraft";
                         da = new OleDbDataAdapter(cmd.CommandText, con.ConnectionString);
                         dt = new DataTable();
@@ -65,6 +81,13 @@ namespace Mytems
                     }
                 case 3:
                     {
+                        ImageGame.Width = 450;
+                        BitmapImage bi3 = new BitmapImage();
+                        bi3.BeginInit();
+                        bi3.UriSource = new Uri("Images/450_1000 (1).jpg", UriKind.Relative);
+                        bi3.EndInit();
+                        ImageGame.Stretch = Stretch.Fill;
+                        ImageGame.Source = bi3;
                         cmd.CommandText = "Select * from Lol";
                         da = new OleDbDataAdapter(cmd.CommandText, con.ConnectionString);
                         dt = new DataTable();
@@ -74,6 +97,13 @@ namespace Mytems
                     }
                 case 4:
                     {
+                        ImageGame.Width = 310;
+                        BitmapImage bi3 = new BitmapImage();
+                        bi3.BeginInit();
+                        bi3.UriSource = new Uri("Images/poke crianza2.0.jpg", UriKind.Relative);
+                        bi3.EndInit();
+                        ImageGame.Stretch = Stretch.Fill;
+                        ImageGame.Source = bi3;
                         cmd.CommandText = "Select * from Pokemon";
                         da = new OleDbDataAdapter(cmd.CommandText, con.ConnectionString);
                         dt = new DataTable();
@@ -83,6 +113,13 @@ namespace Mytems
                     }
                 case 5:
                     {
+                        ImageGame.Width = 470;
+                        BitmapImage bi3 = new BitmapImage();
+                        bi3.BeginInit();
+                        bi3.UriSource = new Uri("Images/450_1000.jpg", UriKind.Relative);
+                        bi3.EndInit();
+                        ImageGame.Stretch = Stretch.Fill;
+                        ImageGame.Source = bi3;
                         cmd.CommandText = "Select * from Warcraft";
                         da = new OleDbDataAdapter(cmd.CommandText, con.ConnectionString);
                         dt = new DataTable();
@@ -92,6 +129,13 @@ namespace Mytems
                     }
                 case 6:
                     {
+                        ImageGame.Width = 460;
+                        BitmapImage bi3 = new BitmapImage();
+                        bi3.BeginInit();
+                        bi3.UriSource = new Uri("Images/Fortnite_battle-pass_season-x_S10_KeyArt_LineUp_Logo_1920x1080-1920x1080-4deed5e28027cea2c5d6ab36321f3eaa32b8f6ce.jpg", UriKind.Relative);
+                        bi3.EndInit();
+                        ImageGame.Stretch = Stretch.Fill;
+                        ImageGame.Source = bi3;
                         cmd.CommandText = "Select * from Fortnite";
                         da = new OleDbDataAdapter(cmd.CommandText, con.ConnectionString);
                         dt = new DataTable();
@@ -107,12 +151,9 @@ namespace Mytems
         {
             OleDbDataReader reader = cmd.ExecuteReader();
             reader.Read();
-            int create = dt.Rows.Count;
-            svItems.Height = create * 271;
-            spitem.Height = create * 271;
             if (dt.Rows.Count > 0)
             {
-                for (int i = 0; i <= create - 1; i++)
+                for (int i = 0; i <= dt.Rows.Count - 1; i++)
                 { 
                     StackPanel stack = new StackPanel
                     {
@@ -123,21 +164,22 @@ namespace Mytems
                     {
                         Name = "TitleObj" + i.ToString(),
                         Text = dt.Rows[i]["Objectname"].ToString().Trim(),
-                        Margin = new Thickness(236, 60, 0, 0),
+                        Margin = new Thickness(236, 30, 0, 0),
                         HorizontalAlignment = HorizontalAlignment.Left,
-                        Height = 46,
-                        Width = 363,
-                        FontSize = 20
-                    });
+                        Height = 30,
+                        Width = 700,
+                        FontSize = 20,
+                        FontWeight = FontWeights.SemiBold
+                    }); ;
                     stack.Children.Add(new TextBlock
                     {
                         Name = "ColorObj" + i.ToString(),
                         Text = dt.Rows[i]["Color"].ToString().Trim(),
                         Margin = new Thickness(236, 0, 0, 0),
                         HorizontalAlignment = HorizontalAlignment.Left,
-                        Height = 27,
+                        Height = 18,
                         Width = 164,
-                        FontSize = 12
+                        FontSize = 14
                     });
                     stack.Children.Add(new TextBlock
                     {
@@ -145,27 +187,56 @@ namespace Mytems
                         Text = dt.Rows[i]["Price"].ToString().Trim(),
                         Margin = new Thickness(236, 0, 0, 0),
                         HorizontalAlignment = HorizontalAlignment.Left,
-                        Height = 27,
+                        Height = 18,
                         Width = 164,
+                        FontSize = 14
+                    });
+                    stack.Children.Add(new TextBlock
+                    {
+                        Name = "DescObj" + i.ToString(),
+                        Text = dt.Rows[i]["Description"].ToString().Trim(),
+                        Margin = new Thickness(236, 0, 0, 0),
+                        HorizontalAlignment = HorizontalAlignment.Left,
+                        Height = 35,
+                        Width = 1350,
                         FontSize = 12
                     });
-                    stack.Children.Add(new Button
+
+                    Button btnBuy = new Button();
+                    btnBuy.Name = "btn" + i.ToString();
+                    btnBuy.Content = "Buy";
+                    btnBuy.Margin = new Thickness(429, 0, 0, 0);
+                    btnBuy.HorizontalAlignment = HorizontalAlignment = HorizontalAlignment.Left;
+                    btnBuy.VerticalAlignment = VerticalAlignment = VerticalAlignment.Top;
+                    btnBuy.Height = Height = 27;
+                    btnBuy.Width = Width = 157;
+                    btnBuy.Background = Brushes.Cyan;
+
+                    btnBuy.Click += new RoutedEventHandler(this.button_click);
+
+                stack.Children.Add(btnBuy);
+
+                    stack.Children.Add(new Label
                     {
-                        Name = "btnBuyObj" + i.ToString(),
-                        Content = "Buy",
-                        Margin = new Thickness(429, 0, 0, 0),
-                        HorizontalAlignment = HorizontalAlignment.Left,
-                        VerticalAlignment = VerticalAlignment.Top,
-                        Height = 27,
-                        Width = 157,
-                        Background = new SolidColorBrush(Color.FromRgb(54, 182, 255)),
-                        Foreground = new SolidColorBrush(Color.FromRgb(0, 0, 0))
+                        Name = "SeparatorObj" + i.ToString(),
+                        Margin = new Thickness(0, 10, 0, 0),
+                        Height = 1,
+                        Width = 1600,
+                        Background = Brushes.Black
                     });
                 }
+                reader.Close();
+                con.Close();
             }
             reader.Close();
             con.Close();
          }
+
+        void button_click(object sender, RoutedEventArgs e)
+        {
+            Button btn = sender as Button;
+            MessageBox.Show(btn.Name + " clicked");
+        }
 
         private static BitmapImage BytesToImage(byte[] bytes)
         {
@@ -206,7 +277,7 @@ namespace Mytems
         private void btnHome_Click(object sender, RoutedEventArgs e)
         {
             Home Home = new Home();
-            this.Hide();
+            this.Close();
             Home.Show();
         }
 
